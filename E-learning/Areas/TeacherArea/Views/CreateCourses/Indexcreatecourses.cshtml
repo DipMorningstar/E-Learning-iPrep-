@@ -1,0 +1,184 @@
+﻿@{ Layout = "/Views/Shared/_LayoutTeacher.cshtml"; }
+
+<body>
+
+    <div class="sa4d25">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="st_title"><i class="uil uil-analysis"></i> Create New Course</h2>
+                </div>
+            </div>
+            <form action="IndexcreatecoursesSave" method="post">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="course_tabs_1">
+                            <div class="step-content">
+                                <div class="step-tab-panel step-tab-info active">
+                                    <div class="tab-from-content">
+                                        <div class="title-icon">
+                                            <h3 class="title"><i class="uil uil-info-circle"></i>Course Information</h3>
+                                        </div>
+
+
+                                        <div class="course__form">
+                                            <div class="general_info10">
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="ui search focus mt-30 lbel25">
+                                                            <label>Course Name*</label>
+                                                            <div class="ui left icon input swdh19">
+                                                                <input class="prompt srch_explore" type="text" placeholder="Course Name here" name="Course_name" data-purpose="edit-course-title" maxlength="60" id="main[title]" value="">
+                                                                <div class="badge_num">60</div>
+                                                            </div>
+                                                            <div class="help-block">(Please make this a maximum of 100 characters and unique.)</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="ui search focus mt-30 lbel25">
+                                                            <label>Course Title*</label>
+                                                            <div class="ui left icon input swdh19">
+                                                                <input class="prompt srch_explore" type="text" placeholder="Course title here" name="Course_Title" data-purpose="edit-course-title" maxlength="60" id="main[title]" value="">
+                                                                <div class="badge_num">60</div>
+                                                            </div>
+                                                            <div class="help-block">(Please make this a maximum of 100 characters and unique.)</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="ui search focus lbel25 mt-30">
+                                                            <label>Short Description*</label>
+                                                            <div class="ui form swdh30">
+                                                                <div class="field">
+                                                                    <textarea rows="3" name="Course_Description" id="" placeholder="Course description here..."></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="help-block">220 words</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="course_des_textarea mt-30 lbel25">
+                                                            <label>Course Description*</label>
+                                                            <div class="course_des_bg">
+                                                                <ul class="course_des_ttle">
+                                                                    <li><a href="#"><i class="uil uil-bold"></i></a></li>
+                                                                    <li><a href="#"><i class="uil uil-italic"></i></a></li>
+                                                                    <li><a href="#"><i class="uil uil-list-ul"></i></a></li>
+                                                                    <li><a href="#"><i class="uil uil-left-to-right-text-direction"></i></a></li>
+                                                                    <li><a href="#"><i class="uil uil-right-to-left-text-direction"></i></a></li>
+                                                                    <li><a href="#"><i class="uil uil-list-ui-alt"></i></a></li>
+                                                                    <li><a href="#"><i class="uil uil-link"></i></a></li>
+                                                                    <li><a href="#"><i class="uil uil-text-size"></i></a></li>
+                                                                    <li><a href="#"><i class="uil uil-text"></i></a></li>
+                                                                </ul>
+                                                                <div class="textarea_dt">
+                                                                    <div class="ui form swdh339">
+                                                                        <div class="field">
+                                                                            <textarea rows="5" name="Course_Description" id="id_course_description" placeholder="Insert your course description"></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-12">
+                                                        <div class="ui search focus lbel25 mt-30">
+                                                            <label>What will students learn in your course?*</label>
+                                                            <div class="ui form swdh30">
+                                                                <div class="field">
+                                                                    <textarea rows="3" name="Course_Description" id="" placeholder=""></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="help-block">Student will gain this skills, knowledge after completing this course. (One per line).</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6 col-md-12">
+                                                        <div class="mt-30 lbel25">
+                                                            <label>Course Level*</label>
+                                                        </div>
+                                                        <select class="ui hj145 dropdown cntry152 prompt srch_explore" name="Course_Level">
+                                                            <option value="">Select Level</option>
+                                                            <option value="Beginner">Beginner</option>
+                                                            <option value="Intermediate">Intermediate</option>
+                                                            <option value="Expert">Expert</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <div class="mt-30 lbel25">
+                                                            <label>Course Category*</label>
+                                                        </div>
+                                                        <select class="ui hj145 dropdown cntry152 prompt srch_explore" name="Course_Category">
+                                                            <option value="">Select</option>
+
+                                                            <option class="ui horizontal divider opt_title">Development</option>
+                                                            <option value="Web Development">Web Development</option>
+                                                            <option value="Data Science">Data Science</option>
+                                                            <option value="Programming Languages">Programming Languages</option>
+                                                            <option value="Mobile Apps">Mobile Apps</option>
+                                                            <option value="Game Development">Game Development</option>
+                                                            <option value="Databases">Databases</option>
+                                                            <option value="Software Testing">Software Testing</option>
+                                                            <option value="Software Engineering">Software Engineering</option>
+                                                            <option value="Development Tools">Development Tools</option>
+
+
+                                                        </select>
+
+                                                    </div>
+                                                    <!--course image-->
+                                                    <div class="col-lg-6 col-md-6">
+                                                        <div class="ui search focus mt-30 lbel25">
+                                                            <label>Course image*</label>
+                                                            <div class="ui left icon input swdh19">
+                                                                <input class="prompt srch_explore" type="file" placeholder="Course image here" name="Course_Image" data-purpose="edit-course-title" maxlength="60" id="main[title]" value="">
+                                                                
+                                                            </div>
+                                                             
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="step-footer step-tab-pager">
+
+                        <button data-direction="finish" class="btn btn-default steps_btn">Submit</button>
+                    </div>
+                     
+                </div>
+            </form>
+        </div>
+    </div>
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="../../js/vertical-responsive-menu.min.js"></script>
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../vendor/OwlCarousel/owl.carousel.js"></script>
+    <script src="../../vendor/semantic/semantic.min.js"></script>
+    <script src="../../vendor/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="../../js/custom.js"></script>
+    <script src="../../js/night-mode.js"></script>
+    <script src="../../js/jquery-steps.min.js"></script>
+    <script>
+    $('#add-course-tab').steps({
+            onFinish: function () {
+                alert('Wizard Completed');
+            }
+        });</script>
+    <script>
+    $(function () {
+            $(".sortable").sortable();
+            $(".sortable").disableSelection();
+        });</script>
+</body>
+

@@ -1,0 +1,156 @@
+﻿
+
+@model E_learning.Models.Users
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+
+
+@if (TempData["message"] != null)
+{
+
+    <script type="text/javascript">
+    alert('@TempData["message"]');
+
+    </script>
+
+
+}
+﻿
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=9">
+    <meta name="description" content="gambolthemes">
+    <meta name="author" content="gambolthemes">
+    <title>prep - sign up</title>
+
+    <link rel="icon" type="image/png" href="../../images/fav.png">
+
+    <link href="../../https://fonts.googleapis.com/css?family=roboto:400,700,500" rel='stylesheet'>
+    <link href='../../vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
+    <link href="../../css/vertical-responsive-menu.min.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/responsive.css" rel="stylesheet">
+    <link href="../../css/night-mode.css" rel="stylesheet">
+
+    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../vendor/owlcarousel/assets/owl.carousel.css" rel="stylesheet">
+    <link href="../../vendor/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../vendor/semantic/semantic.min.css">
+</head>
+<body>
+
+    <div class="sign_in_up_bg">
+        <div class="container">
+            <div class="row justify-content-lg-center justify-content-md-center">
+                <div class="col-lg-12">
+                    <div class="main_logo25" id="logo">
+                        <a href="../Home/Index"><img src="../../images/logosize-removebg-preview.png" alt=""></a>
+                        <a href="../Home/Index"><img class="logo-inverse" src="../../images/logosize-removebg-preview.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-8">
+                    <div class="sign_form">
+                        <h2>welcome to prep</h2>
+                        <p>sign up and start learning!</p>
+
+                        <form asp-controller="SignInSignUp" asp-action="Register">
+                            <div style="color:red">
+                                @ViewBag.message
+                            </div>
+                            <div style="color:red">
+                                @TempData["message"]
+                            </div>
+                            <!--User Name-->
+                            <div class="ui search focus">
+                                <div class="ui left icon input swdh11 swdh19">
+                                    <input class="prompt srch_explore form-control" type="text" name="User_name" value="" id="id_fullname" required="" maxlength="64" placeholder="full name">
+                                </div>
+                            </div>
+
+                            <!--User Email-->
+                            <div class="ui search focus mt-15">
+                                <div class="ui left icon input swdh11 swdh19">
+                                    <input class="prompt srch_explore form-control" type="email" name="User_email" value="" id="id_email" required="" maxlength="64" placeholder="email address">
+                                </div>
+                            </div>
+
+                            <!--User Phone number-->
+                            <div class="ui search focus mt-15">
+                                <div class="ui left icon input swdh11 swdh19">
+                                    <input class="prompt srch_explore form-control" type="tel" name="User_Phone" value="" id="id_fullname" required="" maxlength="10" placeholder="Phone Number">
+                                </div>
+                            </div>
+
+                            <!--User Date Of Birth-->
+                            <div class="ui search focus mt-15">
+                                <div class="ui left icon input swdh11 swdh19">
+                                    <input class="prompt srch_explore form-control" type="date" name="DateOfBirth" value="" id="id_fullname" required=""  placeholder="DOB">
+                                </div>
+                            </div>
+                            
+
+                            <!--User Gender-->
+
+
+                            <div class="ui search focus mt-15 border">
+                                <div class="ui left icon input swdh11 swdh19">
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label ml-2 mr-2" for="inlineRadio1">Male</label>
+                                        <input class="form-check-input" type="radio" name="User_gender" id="inlineRadio1" value="Male">
+
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label ml-2 mr-2" for="inlineRadio1">Female</label>
+                                        <input class="form-check-input" type="radio" name="User_gender" id="inlineRadio2" value="Female">
+
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label ml-2 mr-2" for="inlineRadio1">Other</label>
+                                        <input class="form-check-input" type="radio" name="User_gender" id="inlineRadio3" value="Others">
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!---User Password-->
+                            <div class="ui search focus mt-15">
+                                <div class="ui left icon input swdh11 swdh19">
+                                    <input class="prompt srch_explore form-control" type="password" name="Password" value="" id="id_password" required="" maxlength="64" placeholder="password">
+                                </div>
+                            </div>
+
+                            <button class="login-btn" type="submit">Sign Up</button>
+
+
+                        </form>
+                        <p class="sgntrm145">by signing up, you agree to our <a href="terms_of_use.html">terms of use</a> and <a href="terms_of_use.html">privacy policy</a>.</p>
+
+                        <p class="mb-0 mt-30">already have an account? <a href="../SignInSignUp/IndexSignIn">Sign In</a></p>
+                    </div>
+                    <div class="sign_footer"><img src="../../images/minilogosize-removebg-preview (1).png" alt="">© 2022 <strong>prep</strong>. all rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../..js/jquery-3.3.1.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../vendor/owlcarousel/owl.carousel.js"></script>
+    <script src="../..vendor/semantic/semantic.min.js"></script>
+    <script src="../../js/custom.js"></script>
+    <script src="../../js/night-mode.js"></script>
+</body>
+
+
+</html>
+﻿
