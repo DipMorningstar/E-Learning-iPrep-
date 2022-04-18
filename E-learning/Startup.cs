@@ -59,6 +59,15 @@ namespace E_learning
 
             AppDomain.CurrentDomain.SetData("ContentRootPath", env.ContentRootPath);
             AppDomain.CurrentDomain.SetData("WebRootPath", env.WebRootPath);
+            // app.UseSpa(spa =>
+            //{
+            //    spa.Options.SourcePath = "ClientApp";
+
+            //    if (env.IsDevelopment())
+            //    {
+            //        spa.UseReactDevelopmentServer(npmScript: "start");
+            //    }
+            //});
         }
     }
 }

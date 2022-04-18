@@ -679,10 +679,11 @@ i.icon1 {
 
 /*--- Index Homepage ---*/
 .footer {
+    position:fixed;
 	background: #333;
 	width: 100%;
 	padding: 0;
-	float: left;
+	/*float: left;*/
 }
 
 .item_f1 {
@@ -1725,7 +1726,7 @@ i.icon1 {
     border: 1px solid #efefef;
     border-radius: 3px;
     margin-bottom: 12px;
-    overflow-x: inherit;
+ /*   overflow-x: inherit;*/
 }
 
 table.table.ucp-table {
@@ -1828,7 +1829,7 @@ table {
 
 .panel-group {
     width: 100%;
-    float: left;
+    /*float: left;*/
 	margin-top: 30px;
 }
 
@@ -1841,7 +1842,7 @@ table {
 }
 
 .panel-default {
-    float: left;
+  /*  float: left;*/
     width: 100%;
 	margin-bottom: 30px;
 }
@@ -4173,16 +4174,16 @@ i.icon8 {
 
 .main-btn {
     height: 40px;
-    padding: 0 20px;
-    font-size: 14px;
+    padding: 12px 5px 12px 5px;
     color: #fff;
     border: 0;
     background: #ed2a26;
     border-radius: 3px;
-    margin-right: 5px;
+    /* margin-right: 5px;*/
     font-weight: 500;
-	font-family: "Roboto", sans-serif !important;
+    font-family: "Roboto", sans-serif !important;
 }
+
 
 .main-btn:hover {
     color: #fff !important;
@@ -4320,13 +4321,13 @@ i.icon8 {
     text-align: left;
 }
 
-.z-bigger [type="checkbox"]:checked, [type="checkbox"]:not(:checked), [type="radio"]:checked, [type="radio"]:not(:checked) {
-    position: absolute;
-    left: -9999px;
-    width: 0;
+/*.z-bigger [type="checkbox"]:checked, [type="checkbox"]:not(:checked), [type="radio"]:checked, [type="radio"]:not(:checked) {
+    position: absolute;*/
+   /* left: -9999px;*/
+    /*width: 0;
     height: 0;
     visibility: hidden;
-}
+}*/
 
 .video-category label span {
     font-size: 14px;

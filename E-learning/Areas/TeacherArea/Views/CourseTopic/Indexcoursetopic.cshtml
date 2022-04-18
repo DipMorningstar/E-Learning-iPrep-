@@ -1,9 +1,8 @@
-﻿@{ Layout = "/Views/Shared/_LayoutTeacher.cshtml"; }﻿
+﻿@using System.Data;
+@{ Layout = "/Views/Shared/_LayoutTeacher.cshtml"; }﻿
 
 <body>
-
-
-
+    <!---DropDown Course name and Show And Add Topic Button-->
     <div class="sa4d25">
         <div class="container">
             <div class="row">
@@ -16,36 +15,35 @@
 
                 <div class="tab-from-content">
 
-
-
                     <div class="curriculum-section">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="curriculum-add-item">
-                                    <div class="col-md-2">
-                                        <h4 class="section-title mt-0">Course</h4>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <select class="ui hj145 dropdown cntry152 prompt srch_explore" style="width:500px" name="">
-                                            <option value="">Select Course</option>
-                                            <option value="PP001">MySQl</option>
-                                            <option value="PP002">C++</option>
-                                            <option value="PP003">Javaf</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <button class="main-btn color btn-hover ml-left add-section-title" data-toggle="modal" data-target="#add_section_model">Show</button>
-                                    </div>
+                                <form action="/TeacherArea/CourseTopic/GetTopiclist" method="post">
+                                    <div class="curriculum-add-item">
+                                        <div class="col-md-2">
+                                            <h4 class="section-title mt-0">Course</h4>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6">
+                                            <select class="ui hj145 dropdown cntry152 prompt srch_explore" name="CrList">
+                                                @foreach (var item in ViewData["CoursesList"] as List<E_learning.Areas.TeacherArea.Models.CourseList>)
+                                                {
+                                                    <option value="@item.courseId">@item.coursename</option>
+                                                }
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button class="main-btn color btn-hover ml-left add-section-title" type="submit">Show</button>
+                                        </div>
 
-
-                                </div>
+                                        <div class="col-md-2">
+                                            <a class="main-btn color" id="Addtopic" data-toggle="modal" data-target="#add_section_model">Add Topic</a>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
 
             </div>
 
@@ -54,856 +52,323 @@
     </div>
 
 
-
+    <!---Topic and Quiz Model-->
     <div class="modal fade" id="add_section_model" tabindex="-1" aria-labelledby="lectureModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="lectureModalLabel">Topic</h5>
+                    <h5 class="modal-title" id="lectureModalLabel">Topic And Question</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
 
                 </div>
+                <form action="TopicLecture" method="post">
+                    <div class="curriculum-add-item">
+                        <div class="col-md-2">
+                            <h4 class="section-title mt-0"> Select Course</h4>
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <select class="ui hj145 dropdown cntry152 prompt srch_explore" name="CrList">
+                                @foreach (var item in ViewData["CoursesList"] as List<E_learning.Areas.TeacherArea.Models.CourseList>)
+                                {
+                                    <option value="@item.CourseCode">@item.coursename</option>
+                                }
+                            </select>
+                        </div>
 
 
-
-                <div class="modal-header">
-                    <div class="nav nav-pills flex-column flex-sm-row nav-tabs" role="tablist">
-
-                        <a class="flex-sm-fill text-sm-center nav-link active" data-toggle="tab" href="#nav-lecture" id="addlecture" role="tab" aria-selected="true" style="background-color: #ed2a26"><i class="fas fa-file-alt mr-2"></i>Add Lecture</a>
-                        <a class="flex-sm-fill text-sm-center nav-link " data-toggle="tab" href="#nav-quiz" id="#addquiz" role="tab" aria-selected="false" style="background-color: #ed2a26"><i class="fas fa-stream mr-2"></i>Add Quiz </a>
                     </div>
+                    <div class="modal-header">
+                        <div class="nav nav-pills flex-column flex-sm-row nav-tabs" role="tablist">
 
+                            <a class="flex-sm-fill text-sm-center nav-link active" data-toggle="tab" href="#nav-lecture" id="addlecture" role="tab" aria-selected="true" style="background-color: #ed2a26"><i class="fas fa-file-alt mr-2"></i>Add Lecture</a>
+                            @*<a class="flex-sm-fill text-sm-center nav-link " data-toggle="tab" href="#nav-quiz" id="#addquiz" role="tab" aria-selected="false" style="background-color: #ed2a26"><i class="fas fa-stream mr-2"></i>Add Quiz </a>*@
+                        </div>
 
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
 
-                </div>
-
-
-
-
-
-                <div class="tab-content">
-                    <div class="tab-pane fade show active modal-body " id="nav-lecture" role="tabpanel">
-                        <form action="" method="post">
-
-
-                            <div class="row">
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="ui search focus lbel25 mt-30">
-                                        <label>Topic Name*</label>
-                                        <input class="form_input_1" type="text" placeholder="Topic Name here">
-                                    </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="ui search focus lbel25 mt-30">
+                                    <label>Topic Name*</label>
+                                    <input class="form_input_1" type="text" name="Topic_name" placeholder="Topic Name here">
                                 </div>
+                            </div>
 
 
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="course_des_textarea mt-30 lbel25">
-                                        <label>Topic Description*</label>
-                                        <div class="course_des_bg">
-                                            <ul class="course_des_ttle">
-                                                <li><a href="#"><i class="uil uil-bold"></i></a></li>
-                                                <li><a href="#"><i class="uil uil-italic"></i></a></li>
-                                                <li><a href="#"><i class="uil uil-list-ul"></i></a></li>
-                                                <li><a href="#"><i class="uil uil-left-to-right-text-direction"></i></a></li>
-                                                <li><a href="#"><i class="uil uil-right-to-left-text-direction"></i></a></li>
-                                                <li><a href="#"><i class="uil uil-list-ui-alt"></i></a></li>
-                                                <li><a href="#"><i class="uil uil-link"></i></a></li>
-                                                <li><a href="#"><i class="uil uil-text-size"></i></a></li>
-                                                <li><a href="#"><i class="uil uil-text"></i></a></li>
-                                            </ul>
-                                            <div class="textarea_dt">
-                                                <div class="ui form swdh339">
-                                                    <div class="field">
-                                                        <textarea rows="5" name="Course_Description" id="id_course_description" placeholder="Insert your Topic description"></textarea>
-                                                    </div>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="course_des_textarea mt-30 lbel25">
+                                    <label>Topic Description*</label>
+                                    <div class="course_des_bg">
+                                        <ul class="course_des_ttle">
+                                            <li><a href="#"><i class="uil uil-bold"></i></a></li>
+                                            <li><a href="#"><i class="uil uil-italic"></i></a></li>
+                                            <li><a href="#"><i class="uil uil-list-ul"></i></a></li>
+                                            <li><a href="#"><i class="uil uil-left-to-right-text-direction"></i></a></li>
+                                            <li><a href="#"><i class="uil uil-right-to-left-text-direction"></i></a></li>
+                                            <li><a href="#"><i class="uil uil-list-ui-alt"></i></a></li>
+                                            <li><a href="#"><i class="uil uil-link"></i></a></li>
+                                            <li><a href="#"><i class="uil uil-text-size"></i></a></li>
+                                            <li><a href="#"><i class="uil uil-text"></i></a></li>
+                                        </ul>
+                                        <div class="textarea_dt">
+                                            <div class="ui form swdh339">
+                                                <div class="field">
+                                                    <textarea rows="5" name="Topic_Description" id="id_course_description" placeholder="Insert your Topic description"></textarea>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
 
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="ui search focus lbel25 mt-30">
-                                        <label>Video URL*</label>
-                                        <input class="form_input_1" type="text" placeholder="Video URL here">
-                                    </div>
-                                </div>
-
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="ui search focus lbel25 mt-30">
-                                        <label>External URL*</label>
-                                        <input class="form_input_1" type="text" placeholder="External URL here">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="ui search focus lbel25 mt-30">
-                                        <div class="upload-btn">
-                                            <label>Attachment*</label>
-                                            <input class="uploadBtn-main-input" type="file" id="SourceFile__input--source">
-                                            <label for="SourceFile__input--source" title="Zip"><i class="far fa-plus-square mr-2"></i>Add File here</label>
-                                        </div>
-                                        <span class="uploadBtn-main-file">Supports: jpg, jpeg, png, pdf or .zip</span>
-
-
-                                    </div>
-
+                            <div class="col-lg-12 col-md-12">
+                                <div class="ui search focus lbel25 mt-30">
+                                    <label>Video URL*</label>
+                                    <input class="form_input_1" type="text" name="videoUrl" placeholder="Video URL here">
                                 </div>
                             </div>
 
 
-                        </form>
-                        <div class="modal-footer">
-                            <div class="step-footer step-tab-pager">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="ui search focus lbel25 mt-30">
+                                    <label>External URL*</label>
+                                    <input class="form_input_1" type="text" name="URL" placeholder="External URL here">
+                                </div>
+                            </div>
 
-                                <button data-direction="next" class="btn btn-default steps_btn">Next</button>
+                            <div class="col-lg-12 col-md-12">
+                                <div class="ui search focus lbel25 mt-30">
+                                    <div class="upload-btn">
+                                        <label>Attachment*</label>
+                                        <input class="uploadBtn-main-input" name="FileName" type="file" id="SourceFile__input--source">
+                                        <label for="SourceFile__input--source" title="Zip"><i class="far fa-plus-square mr-2"></i>Add File here</label>
+                                    </div>
+                                    <span class="uploadBtn-main-file">Supports: jpg, jpeg, png, pdf or .zip</span>
 
+
+                                </div>
 
                             </div>
                         </div>
 
+
                     </div>
 
+                    <div class="modal-header">
+                        <div class="nav nav-pills flex-column flex-sm-row nav-tabs" role="tablist">
 
+                            <a class="flex-sm-fill text-sm-center nav-link active" data-toggle="tab" href="#nav-lecture" id="addlecture" role="tab" aria-selected="true" style="background-color: #ed2a26"><i class="fas fa-file-alt mr-2"></i>Add Quiz</a>
+                            @*<a class="flex-sm-fill text-sm-center nav-link " data-toggle="tab" href="#nav-quiz" id="#addquiz" role="tab" aria-selected="false" style="background-color: #ed2a26"><i class="fas fa-stream mr-2"></i>Add Quiz </a>*@
+                        </div>
 
+                    </div>
 
+                    <div class="modal-body">
+                        <div class="row">
 
+                            <div class="col-lg-12">
+                                <div>
+                                    @for (int i = 1; i <= 3; i++)
+                                    {
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="ui search focus lbel25 mt-30">
 
-
-
-
-                    <div class="tab-pane fade show  modal-body" id="nav-quiz">
-                        <form action="" method="post">
-
-
-                            <div class="row">
-
-                                <div class="col-lg-3">
-                                    <div class="form_group mt-30">
-                                        <label class="label25">Number Of Question*</label>
-                                        <div class="input-group">
-                                            <input class="form_input_1 white-bg" id="numberofqstn" type="number" placeholder="0">
-                                            <button type="button" class="main-btn" onclick="myFunction()">Set</button>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div>
-                                        @for (int i = 0; i <= 5; i++)
-                                        {
-                                            <div class="col-lg-12 col-md-12">
-                                                <div class="ui search focus lbel25 mt-30">
-                                                    <label>Question</label>
-                                                    <input class="form_input_1" type="text" placeholder="Topic Name here" name="Question_@i">
-                                                </div>
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <div class="col-lg-5 mr-md-5 mt-md-3">
-
-                                                            A <input class="form_input_1" type="text" placeholder="Topic Name here" />
-                                                            <input id="Radio1" type="radio" value="A" class="radio-item" name="OptionA_@i" />
-                                                        </div>
-                                                        <div class="col-lg-5 mr-md-5 mt-md-3">
-
-                                                            B <input class="form_input_1" type="text" placeholder="Topic Name here" />
-                                                            <input id="Radio1" type="radio" value="B" class="radio-item" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-5 mr-md-5 mt-md-3">
-
-                                                            C <input class="form_input_1" type="text" placeholder="Topic Name here" />  <input id="Radio1" type="radio" value="C" class="radio-item" />
-                                                        </div>
-                                                        <div class="col-lg-5 mr-md-5 mt-md-3">
-
-                                                            D <input class="form_input_1" type="text" placeholder="Topic Name here" /> <input id="Radio1" type="radio" value="D" class="radio-item" />
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
+                                                <label>Question @i</label>
+                                                <input class="form_input_1" type="text" placeholder="Question Name here" name="Question_@i">
                                             </div>
 
-                                        }
-                                    </div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-lg-5 mr-md-5 mt-md-3">
 
+                                                        A <input id="Radio1" type="radio" value="A" class="radio-item btn-group" onclick="showalert();" name="OptionA_@i" />
+
+                                                        <input class="form_input_1" type="text" name="Questions_options" placeholder="Answer Option here" />
+
+                                                    </div>
+                                                    <div class="col-lg-5 mr-md-5 mt-md-3">
+
+                                                        B <input id="Radio1" type="radio" value="B" class="radio-item btn-group" onclick="alert('This is the correct answer');" name="OptionA_@i" />
+                                                        <input class="form_input_1" type="text" name="Questions_options" placeholder="Answer Option here" />
+
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-5 mr-md-5 mt-md-3">
+
+                                                        C <input id="Radio1" type="radio" value="C" class="radio-item btn-group" onclick="alert('This is the correct answer');" name="OptionA_@i" />
+                                                        <input class="form_input_1" type="text" name="Questions_options" placeholder="Answer Option here" />
+
+                                                    </div>
+                                                    <div class="col-lg-5 mr-md-5 mt-md-3">
+
+                                                        D  <input id="Radio1" type="radio" value="D" class="radio-item btn-group" onclick="alert('This is the correct answer');" name="OptionA_@i" />
+                                                        <input class="form_input_1" type="text" name="Questions_options" placeholder="Answer Option here" />
+
+
+                                                    </div>
+
+                                                </div>
+                                                <hr style="border: none; border-top: 1px solid #333; color: #333; overflow: visible; text-align: center; height: 5px" />
+                                            </div>
+
+
+                                        </div>
+
+                                    }
                                 </div>
 
-
                             </div>
 
 
-
-
-                        </form>
-                        <div class="modal-footer">
-                            <div class="step-footer step-tab-pager">
-
-                                <button data-direction="prev" class="btn btn-default steps_btn " style="position:absolute; margin-left:-670px">PREVIOUS</button>
-
-                                <button data-direction="finish" class="btn btn-default steps_btn">Save</button>
-
-                            </div>
                         </div>
-
                     </div>
-                </div>
+                    <div class="modal-footer">
+                        <div class="step-footer step-tab-pager">
+
+                            <button data-direction="finish" class="btn btn-default steps_btn">Submit</button>
+
+                        </div>
+                    </div>
+                </form>
+
+
+
+
+
 
             </div>
-
-
-
-
-
 
 
         </div>
     </div>
 
 
+    <!--TOPic Details Show-->
+    <div class="sa4d25">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="my_courses_tabs">
+                        <ul class="nav nav-pills my_crse_nav" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-my-courses-tab" data-toggle="pill" href="#pills-my-courses" role="tab" aria-controls="pills-my-courses" aria-selected="true">Topic</a>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-my-courses" role="tabpanel">
+                                <div class="table-responsive mt-30">
+                                    <table class="table ucp-table">
+                                        <thead class="thead-s">
+                                            <tr>
+                                                <th class="text-center" scope="col">Course Code</th>
+
+                                                <th class="text-center" scope="col">Topic Name</th>
+
+                                                <th class="text-center" scope="col">Topic Description</th>
+
+                                                <th class="text-center" scope="col">Econtent</th>
+
+                                                <th class="text-center" scope="col">Status</th>
+                                                <th class="text-center" scope="col">Action</th>
+                                            </tr>
+                                        </thead>
 
 
+                                        <tbody>
+
+                                            @if (ViewData["TopicList"] != null)
+                                            {
+                                                @foreach (var item in ViewData["TopicList"] as List<E_learning.Areas.TeacherArea.Models.Showtopic>)
+                                                {
+                                                    <tr>
+                                                        <td class="text-center">@item.Course_code</td>
+                                                        <td class="text-center">@item.Topic_name</td>
+                                                        <td class="text-center">@item.Topic_Description</td>
+
+                                                        <td class="text-center"> <a class="main-btn color" data-toggle="modal" data-target="#show_econtent_model">Show EContent</a></td>
+                                                        <td class="text-center"> <b class="course_active"></b>@item.Status</td>
+                                                        <td class="text-center">
+
+                                                            <a href="#" type="submit" name="dltbutton" value="Delete" class="gray-s">@ViewBag.Deletebutton<i class="uil uil-trash-alt"></i></a>
+                                                        </td>
+                                                    </tr>
+                                                }
+
+                                            }
+
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--<div class="modal fade" id="add_section_model" tabindex="-1" aria-labelledby="lectureModalLabel" aria-hidden="true">
+    <div class="modal fade" id="show_econtent_model" tabindex="-1" aria-labelledby="lectureModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="lectureModalLabel">Topic</h5>
+                    <h5 class="modal-title">EContent</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                    <div class="table-responsive mt-30">
+                        <table class="table ucp-table">
+                            <thead class="thead-s">
+                                <tr>
+                                    <th class="text-center" scope="col">Video URL</th>
 
-                <!---Topic creation popup page
-                <div class="modal-body">
-                    <div class="new-section-block">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="new-section">
-                                    <div class="form_group">
-                                        <label class="label25">Topic Name*</label>
-                                        <input class="form_input_1" type="text" placeholder="Topic title here">
+                                    <th class="text-center" scope="col">Other URL</th>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                    <th class="text-center" scope="col">Attachment</th>
+
+
+                                </tr>
+                            </thead>
+                        </table>
                     </div>
-                </div>
-
-                <!--Topic Button Add and Close-->
-    <!--<div class="modal-footer">
-        <button type="button" class="main-btn cancel" data-dismiss="modal">Close</button>
-        <button type="button" class="main-btn">Add Topic</button>
+                
+            </div>
+        </div>
     </div>
-    <div class="modal-header">-->
-    <!---lecture Add and Close button-->
-    <!--<div class="nav nav-pills flex-column flex-sm-row nav-tabs" role="tablist">-->
-    <!--@*<h5 class="modal-title" id="lectureModalLabel">Add Lecture</h5>*@
-            <a class="flex-sm-fill text-sm-center nav-link active" data-toggle="tab" href="#nav-lecture" role="tab" aria-selected="true" style="background-color: #ed2a26"><i class="fas fa-file-alt mr-2"></i>Add Lecture</a>
-            <a class="flex-sm-fill text-sm-center nav-link " data-toggle="tab" href="#nav-quiz" role="tab" aria-selected="false" style="background-color: #ed2a26"><i class="fas fa-stream mr-2"></i>Add Quiz </a>
 
-        </div>
-
-
-    </div>
-    <div class="tab-content">
-        <div class="tab-pane fade show active modal-body " id="nav-lecture" role="tabpanel">
-            <div class="new-section-block">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="course-main-tabs">
-                            <div class="nav nav-pills flex-column flex-sm-row nav-tabs" role="tablist">
-                                <a class="flex-sm-fill text-sm-center nav-link active" data-toggle="tab" href="#nav-basic" role="tab" aria-selected="true"><i class="fas fa-file-alt mr-2"></i>Basic</a>
-                                <a class="flex-sm-fill text-sm-center nav-link" data-toggle="tab" href="#nav-video" role="tab" aria-selected="false"><i class="fas fa-video mr-2"></i>Video</a>
-                                <a class="flex-sm-fill text-sm-center nav-link" data-toggle="tab" href="#nav-attachment" role="tab" aria-selected="false"><i class="fas fa-paperclip mr-2"></i>Attachments</a>
-                            </div>
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="nav-basic" role="tabpanel">
-                                    <div class="new-section mt-30">
-                                        <div class="form_group">
-                                            <label class="label25">Lecture Title*</label>
-                                            <input class="form_input_1" type="text" placeholder="Title here">
-                                        </div>
-                                    </div>
-                                    <div class="ui search focus lbel25 mt-30">
-                                        <label>Description*</label>
-                                        <div class="ui form swdh30">
-                                            <div class="field">
-                                                <textarea rows="3" name="description" id="" placeholder="description here..."></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="preview-dt">
-                                        <span class="title-875">Free Preview</span>
-                                        <label class="switch">
-                                            <input type="checkbox" name="preview_op" value="">
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="nav-video" role="tabpanel">
-                                    <div class="lecture-video-dt mt-30">
-                                        <span class="video-info">Select your preferred video type. (.mp4, YouTube, etc.)</span>
-                                        <div class="video-category">
-                                            <label><input type="radio" name="colorRadio" value="mp4" checked=""><span>HTML5(mp4)</span></label>
-                                            <label><input type="radio" name="colorRadio" value="url"><span>External URL</span></label>
-                                            <label><input type="radio" name="colorRadio" value="youtube"><span>YouTube</span></label>
-
-
-                                            <div class="mp4 video-box" style="display: block;">
-                                                <div class="row">
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <div class="upload-file-dt mt-30">
-                                                            <div class="upload-btn">
-                                                                <input class="uploadBtn-main-input" type="file" id="VideoFile__input--source">
-                                                                <label for="VideoFile__input--source" title="Zip">Upload Video</label>
-                                                            </div>
-                                                            <span class="uploadBtn-main-file">File Format: .mp4</span>
-                                                            <span class="uploaded-id">Uploaded ID : <b>12</b></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 col-md-6">
-                                                        <div class="upload-file-dt mt-30">
-                                                            <div class="upload-btn">
-                                                                <input class="uploadBtn-main-input" type="file" id="PosterFile__input--source">
-                                                                <label for="PosterFile__input--source" title="Zip">Video Poster</label>
-                                                            </div>
-                                                            <span class="uploadBtn-main-file color-b">Uploaded ID : preview.jpg</span>
-                                                            <span class="uploaded-id color-fmt">Size: 590x300 pixels. Supports: jpg,jpeg, or png</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="video-duration">
-                                                    <label class="label25">Video Runtime - <strong>hh:mm:ss</strong>*</label>
-                                                    <div class="duration-time">
-                                                        <div class="input-group">
-                                                            <input type="text" class="form_input_1" name="video[runtime][hours]" value="00">
-                                                            <input type="text" class="form_input_1" name="video[runtime][mins]" value="1">
-                                                            <input type="text" class="form_input_1" name="video[runtime][secs]" value="00">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="url video-box">
-                                                <div class="new-section">
-                                                    <div class="ui search focus mt-30 lbel25">
-                                                        <label>External URL*</label>
-                                                        <div class="ui left icon input swdh19">
-                                                            <input class="prompt srch_explore" type="text" placeholder="External Video URL" name="" id="" value="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="video-duration">
-                                                    <label class="label25">Video Runtime - <strong>hh:mm:ss</strong>*</label>
-                                                    <div class="duration-time">
-                                                        <div class="input-group">
-                                                            <input type="text" class="form_input_1" name="video[runtime][hours]" value="00">
-                                                            <input type="text" class="form_input_1" name="video[runtime][mins]" value="1">
-                                                            <input type="text" class="form_input_1" name="video[runtime][secs]" value="00">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="youtube video-box">
-                                                <div class="new-section">
-                                                    <div class="ui search focus mt-30 lbel25">
-                                                        <label>Youtube URL*</label>
-                                                        <div class="ui left icon input swdh19">
-                                                            <input class="prompt srch_explore" type="text" placeholder="Youtube Video URL" name="" id="" value="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="video-duration">
-                                                    <label class="label25">Video Runtime - <strong>hh:mm:ss</strong>*</label>
-                                                    <div class="duration-time">
-                                                        <div class="input-group">
-                                                            <input type="text" class="form_input_1" name="video[runtime][hours]" value="00">
-                                                            <input type="text" class="form_input_1" name="video[runtime][mins]" value="1">
-                                                            <input type="text" class="form_input_1" name="video[runtime][secs]" value="00">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="nav-attachment" role="tabpanel">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="upload-file-dt mt-30">
-                                                <div class="upload-btn">
-                                                    <input class="uploadBtn-main-input" type="file" id="SourceFile__input--source">
-                                                    <label for="SourceFile__input--source" title="Zip"><i class="far fa-plus-square mr-2"></i>Attachment</label>
-                                                </div>
-                                                <span class="uploadBtn-main-file">Supports: jpg, jpeg, png, pdf or .zip</span>
-                                                <div class="add-attachments-dt">
-                                                    <div class="attachment-items">
-                                                        <div class="attachment_id">Uploaded ID: 12</div>
-                                                        <button class="cancel-btn" type="button"><i class="fas fa-trash-alt"></i></button>
-                                                    </div>
-                                                    <div class="attachment-items">
-                                                        <div class="attachment_id">Uploaded ID: 13</div>
-                                                        <button class="cancel-btn" type="button"><i class="fas fa-trash-alt"></i></button>
-                                                    </div>
-                                                    <div class="attachment-items">
-                                                        <div class="attachment_id">Uploaded ID: 14</div>
-                                                        <button class="cancel-btn" type="button"><i class="fas fa-trash-alt"></i></button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="main-btn cancel" data-dismiss="modal">Close</button>
-                                    <button type="button" class="main-btn">Add Lecture</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="tab-pane fade show  modal-body" id="nav-quiz">
-            <div class="new-section-block">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="course-main-tabs">
-                            <div class="nav nav-pills flex-column flex-sm-row nav-tabs" role="tablist">
-                                <a class="flex-sm-fill text-sm-center nav-link active" data-toggle="tab" href="#nav-quizbasic" role="tab" aria-selected="true"><i class="fas fa-file-alt mr-2"></i>Basic</a>
-                                <a class="flex-sm-fill text-sm-center nav-link" data-toggle="tab" href="#nav-questions" role="tab" aria-selected="false"><i class="fas fa-question-circle mr-2"></i>Questions</a>
-                                <a class="flex-sm-fill text-sm-center nav-link" data-toggle="tab" href="#nav-setting" role="tab" aria-selected="false"><i class="fas fa-cog mr-2"></i>Setting</a>
-                            </div>
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="nav-quizbasic" role="tabpanel">
-                                    <div class="new-section">
-                                        <div class="form_group mt-30">
-                                            <label class="label25">Quiz Title*</label>
-                                            <input class="form_input_1" type="text" placeholder="Title here">
-                                        </div>
-                                    </div>
-                                    <div class="ui search focus lbel25 mt-30">
-                                        <label>Description*</label>
-                                        <div class="ui form swdh30">
-                                            <div class="field">
-                                                <textarea rows="3" name="description" id="" placeholder="description here..."></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="nav-questions" role="tabpanel">
-                                    <div class="lecture-video-dt mt-30">
-                                        <div class="add-ques-dt">
-                                            <button type="button" class="main-btn color btn-hover w-100" data-toggle="collapse" data-target="#add-ques"><i class="far fa-plus-square mr-2"></i>Add Question</button>
-                                            <div id="add-ques" class="collapse">
-                                                <div class="lecture-video-dt mt-30">
-                                                    <span class="video-info">Question Type</span>
-                                                    <div class="video-category">
-                                                        <label><input type="radio" name="colorRadio" value="schoice"><span><i class="far fa-dot-circle mr-2"></i>Single Choice</span></label>
-                                                        <label><input type="radio" name="colorRadio" value="mchoice"><span><i class="far fa-check-circle mr-2"></i>Multiple Choice</span></label>
-
-
-                                                        <div class="schoice quiz-box">
-                                                            <div class="ques-box">
-                                                                <div class="row">
-                                                                    <div class="col-lg-2 col-md-2">
-                                                                        <div class="form_group mt-30">
-                                                                            <label class="label25 text-left">Image*</label>
-                                                                            <div class="upload-thumb">
-                                                                                <input class="uploadBtn-input-preview" type="file" accept="image/png" id="thumbnail_source">
-                                                                                <label class="mx-0 my-0" for="thumbnail_source" title="Image"><img class="img-thumbnail" src="images/placeholder-image.png" alt=""></label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-7 col-md-9">
-                                                                        <div class="form_group mt-30">
-                                                                            <label class="label25 text-left">Question Title*</label>
-                                                                            <input class="form_input_1" type="text" placeholder="Write question title">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-3 col-md-12">
-                                                                        <div class="form_group mt-30">
-                                                                            <label class="label25 text-left">Score*</label>
-                                                                            <input class="form_input_1" type="number" placeholder="Score">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="ans-box">
-                                                                <div class="row">
-                                                                    <div class="col-lg-12 col-md-12">
-                                                                        <button class="main-btn color btn-hover mt-30">Add Option</button>
-                                                                    </div>
-                                                                    <div class="col-lg-12 col-md-12">
-                                                                        <div class="option-item">
-                                                                            <div class="opt-title">
-                                                                                <h4>1. Option</h4>
-                                                                                <span class="opt-del"><i class="fas fa-trash-alt"></i></span>
-                                                                            </div>
-                                                                            <div class="option-wrap">
-                                                                                <div class="form_group">
-                                                                                    <label class="label25 text-left">Option Title*</label>
-                                                                                    <input class="form_input_1" type="text" placeholder="Option title">
-                                                                                </div>
-                                                                                <div class="agree_checkbox">
-                                                                                    <input type="checkbox" id="check1">
-                                                                                    <label for="check1">Correct answer</label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mchoice quiz-box">
-                                                            <div class="ques-box">
-                                                                <div class="row">
-                                                                    <div class="col-lg-2 col-md-2">
-                                                                        <div class="form_group mt-30">
-                                                                            <label class="label25 text-left">Image*</label>
-                                                                            <div class="upload-thumb">
-                                                                                <input class="uploadBtn-input-preview" type="file" accept="image/png" id="thumbnail_source1">
-                                                                                <label class="mx-0 my-0" for="thumbnail_source1" title="Image"><img class="img-thumbnail" src="images/placeholder-image.png" alt=""></label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-7 col-md-9">
-                                                                        <div class="form_group mt-30">
-                                                                            <label class="label25 text-left">Question Title*</label>
-                                                                            <input class="form_input_1" type="text" placeholder="Write question title">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-3 col-md-12">
-                                                                        <div class="form_group mt-30">
-                                                                            <label class="label25 text-left">Score*</label>
-                                                                            <input class="form_input_1" type="number" placeholder="Score">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="ans-box">
-                                                                <div class="row">
-                                                                    <div class="col-lg-12 col-md-12">
-                                                                        <button class="main-btn color btn-hover mt-30">Add Option</button>
-                                                                    </div>
-                                                                    <div class="col-lg-12 col-md-12">
-                                                                        <div class="option-item">
-                                                                            <div class="opt-title">
-                                                                                <h4>1. Option</h4>
-                                                                                <span class="opt-del"><i class="fas fa-trash-alt"></i></span>
-                                                                            </div>
-                                                                            <div class="option-wrap">
-                                                                                <div class="form_group">
-                                                                                    <label class="label25 text-left">Option Title*</label>
-                                                                                    <input class="form_input_1" type="text" placeholder="Option title">
-                                                                                </div>
-                                                                                <div class="agree_checkbox">
-                                                                                    <input type="checkbox" id="check2">
-                                                                                    <label for="check2">Correct answer</label>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="sline quiz-box">
-                                                            <div class="ques-box">
-                                                                <div class="row">
-                                                                    <div class="col-lg-2 col-md-2">
-                                                                        <div class="form_group mt-30">
-                                                                            <label class="label25 text-left">Image*</label>
-                                                                            <div class="upload-thumb">
-                                                                                <input class="uploadBtn-input-preview" type="file" accept="image/png" id="thumbnail_source2">
-                                                                                <label class="mx-0 my-0" for="thumbnail_source2" title="Image"><img class="img-thumbnail" src="images/placeholder-image.png" alt=""></label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-7 col-md-9">
-                                                                        <div class="form_group mt-30">
-                                                                            <label class="label25 text-left">Question Title*</label>
-                                                                            <input class="form_input_1" type="text" placeholder="Write question title">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-3 col-md-12">
-                                                                        <div class="form_group mt-30">
-                                                                            <label class="label25 text-left">Score*</label>
-                                                                            <input class="form_input_1" type="number" placeholder="Score">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="mline quiz-box">
-                                                            <div class="ques-box">
-                                                                <div class="row">
-                                                                    <div class="col-lg-2 col-md-2">
-                                                                        <div class="form_group mt-30">
-                                                                            <label class="label25 text-left">Image*</label>
-                                                                            <div class="upload-thumb">
-                                                                                <input class="uploadBtn-input-preview" type="file" accept="image/png" id="thumbnail_source3">
-                                                                                <label class="mx-0 my-0" for="thumbnail_source3" title="Image"><img class="img-thumbnail" src="images/placeholder-image.png" alt=""></label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-7 col-md-9">
-                                                                        <div class="form_group mt-30">
-                                                                            <label class="label25 text-left">Question Title*</label>
-                                                                            <input class="form_input_1" type="text" placeholder="Write question title">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-3 col-md-12">
-                                                                        <div class="form_group mt-30">
-                                                                            <label class="label25 text-left">Score*</label>
-                                                                            <input class="form_input_1" type="number" placeholder="Score">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="share-submit-btns pl-0 pb-0">
-                                                    <button class="main-btn color btn-hover"><i class="fas fa-save mr-2"></i>Save Question</button>
-                                                </div>
-                                            </div>
-                                            <div class="added-ques">
-                                                <div class="section-group-list pl-0 pr-0 sortable">
-                                                    <div class="section-list-item">
-                                                        <div class="section-item-title">
-                                                            <i class="far fa-dot-circle mr-2"></i>
-                                                            <span class="section-item-title-text">Question Title</span>
-                                                        </div>
-                                                        <button type="button" class="section-item-tools"><i class="fas fa-edit"></i></button>
-                                                        <button type="button" class="section-item-tools"><i class="fas fa-trash-alt"></i></button>
-                                                        <button type="button" class="section-item-tools ml-auto"><i class="fas fa-bars"></i></button>
-                                                    </div>
-                                                    <div class="section-list-item">
-                                                        <div class="section-item-title">
-                                                            <i class="far fa-check-circle mr-2"></i>
-                                                            <span class="section-item-title-text">Question Title</span>
-                                                        </div>
-                                                        <button type="button" class="section-item-tools"><i class="fas fa-edit"></i></button>
-                                                        <button type="button" class="section-item-tools"><i class="fas fa-trash-alt"></i></button>
-                                                        <button type="button" class="section-item-tools ml-auto"><i class="fas fa-bars"></i></button>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="nav-setting" role="tabpanel">
-                                    <div class="new-section mt-30">
-                                        <div class="quiz-cogs-step">
-                                            <label class="label25 quiz-st-ft text-left">Gradable</label>
-                                            <div class="cogs-toggle">
-                                                <label class="switch">
-                                                    <input type="checkbox" id="gradable_quiz" value="">
-                                                    <span></span>
-                                                </label>
-                                                <label for="gradable_quiz" class="lbl-quiz">Quiz Gradable</label>
-                                            </div>
-                                            <p>If this quiz test affect on the students grading system for this course.</p>
-                                        </div>
-                                        <div class="quiz-cogs-step mt-30">
-                                            <label class="label25 quiz-st-ft text-left">Remaining time display</label>
-                                            <div class="cogs-toggle">
-                                                <label class="switch">
-                                                    <input type="checkbox" id="show_time" value="">
-                                                    <span></span>
-                                                </label>
-                                                <label for="show_time" class="lbl-quiz">Show Time</label>
-                                            </div>
-                                            <p>By enabling this option, quiz taker will show remaining time during attempt.</p>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-4">
-                                                <div class="form_group mt-30">
-                                                    <label class="label25">Time Limit*</label>
-                                                    <div class="input-group">
-                                                        <input class="form_input_1 white-bg" type="number" placeholder="">
-                                                        <div class="input-group-append">
-                                                            <span class="input-group-text int4856">Minutes</span>
-                                                        </div>
-                                                        <span class="alt-text">Set zero to disable time limit.</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form_group mt-30">
-                                                    <label class="label25">Passing Score(%)*</label>
-                                                    <input class="form_input_1" type="number" placeholder="">
-                                                    <span class="alt-text">Student have to collect this score in percent for the pass this quiz.</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <div class="form_group mt-30">
-                                                    <label class="label25">Questions Limit*</label>
-                                                    <input class="form_input_1" type="number" placeholder="">
-                                                    <span class="alt-text">The number of questions student have to answer in this quiz.</span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="main-btn cancel" data-dismiss="modal">Close</button>
-                            <button type="button" class="main-btn">Add Quiz</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>-->
-    <!--Lecture creation-->
-    <!--<div class="added-section-item mb-30">
-                    <div class="section-header">
-                        <h4><i class="fas fa-bars mr-2"></i>Introduction</h4>
-                        <div class="section-edit-options">
-                            <button class="btn-152" type="button" data-toggle="collapse" data-target="#edit-section"><i class="fas fa-edit"></i></button>
-                            <button class="btn-152" type="button"><i class="fas fa-trash-alt"></i></button>
-                        </div>
-                    </div>
-                    <div id="edit-section" class="collapse">
-                        <div class="new-section smt-25">
-                            <div class="form_group">
-                                <div class="ui search focus mt-30 lbel25">
-                                    <label>Topic Name*</label>
-                                    <div class="ui left icon input swdh19">
-                                        <input class="prompt srch_explore" type="text" placeholder="" name="title" maxlength="60" id="main[title]" value="Introduction">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="share-submit-btns pl-0">
-                                <button class="main-btn color btn-hover"><i class="fas fa-save mr-2"></i>Update Section</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-group-list sortable">
-                        <div class="section-list-item">
-                            <div class="section-item-title">
-                                <i class="fas fa-file-alt mr-2"></i>
-                                <span class="section-item-title-text">lecture Title</span>
-                            </div>
-                            <button type="button" class="section-item-tools"><i class="fas fa-edit"></i></button>
-                            <button type="button" class="section-item-tools"><i class="fas fa-trash-alt"></i></button>
-                            <button type="button" class="section-item-tools ml-auto"><i class="fas fa-bars"></i></button>
-                        </div>
-                        <div class="section-list-item">
-                            <div class="section-item-title">
-                                <i class="fas fa-stream mr-2"></i>
-                                <span class="section-item-title-text">Quiz Title</span>
-                            </div>
-                            <button type="button" class="section-item-tools"><i class="fas fa-edit"></i></button>
-                            <button type="button" class="section-item-tools"><i class="fas fa-trash-alt"></i></button>
-                            <button type="button" class="section-item-tools ml-auto"><i class="fas fa-bars"></i></button>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>-->
     @*<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-        <script src="../../js/vertical-responsive-menu.min.js"></script>
-        <script src="../../js/jquery-3.3.1.min.js"></script>
-        <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="../../vendor/OwlCarousel/owl.carousel.js"></script>*@
-    @*<script src="../../vendor/semantic/semantic.min.js"></script>*@
-    @*<script src="../../vendor/jquery-ui-1.12.1/jquery-ui.js"></script>*@
-    @*<script src="../../js/custom.js"></script>*@
-    @*<script src="../../js/night-mode.js"></script>*@
-    @*<script src="../../js/jquery-steps.min.js"></script>*@
-    @*<script>
-            $('#add-course-tab').steps({
-                onFinish: function () {
-                    alert('Wizard Completed');
-                }
-            });
-        </script>
+            <script src="../../js/vertical-responsive-menu.min.js"></script>
+            <script src="../../js/jquery-3.3.1.min.js"></script>
+            <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="../../vendor/OwlCarousel/owl.carousel.js"></script>
+        <script src="../../vendor/semantic/semantic.min.js"></script>
+        <script src="../../vendor/jquery-ui-1.12.1/jquery-ui.js"></script>
+        <script src="../../js/custom.js"></script>
+        <script src="../../js/night-mode.js"></script>
+        <script src="../../js/jquery-steps.min.js"></script>
         <script>
-            $(function () {
-                $(".sortable").sortable();
-                $(".sortable").disableSelection();
-            });
+                $('#add-course-tab').steps({
+                    onFinish: function () {
+                        alert('Wizard Completed');
+                    }
+                });
+            </script>
+            <script>
+                $(function () {
+                    $(".sortable").sortable();
+                    $(".sortable").disableSelection();
+                });
 
-        </script>*@
+            </script>*@
+
 </body>

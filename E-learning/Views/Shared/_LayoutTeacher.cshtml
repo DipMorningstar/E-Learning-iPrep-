@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 
@@ -29,6 +28,14 @@
     <link href="../../vendor/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
 </head>
 <body>
+
+    @if (TempData["Msg"] != null)
+    {
+<script type="text/javascript">
+        alert('@TempData["Msg"]')
+        //$("#error").val(@TempData["Msg"]);
+</script>}
+            else { }
 
     <header class="header clearfix">
         <button type="button" id="toggleMenu" class="toggle_menu">
@@ -96,7 +103,7 @@
                                             <i class='uil uil-check-circle'></i>
                                         </div>
                                     </div>
-                                    <span><a href="https://gambolthemes.net/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a8cfc9c5cac7c4919c9be8cfc5c9c1c486cbc7c5">[email&#160;protected]</a></span>
+                                    <span><a href="https://gambolthemes.net/cdn-cgi/l/email-protection" class="_cf_email_" data-cfemail="a8cfc9c5cac7c4919c9be8cfc5c9c1c486cbc7c5">[email&#160;protected]</a></span>
                                 </div>
                             </div>
                             <a href="my_instructor_profile_view.html" class="dp_link_12">View Instructor Profile</a>
@@ -127,13 +134,14 @@
             <div class="left_section">
                 <ul>
                     <li class="menu--item">
-                        <a href="instructor_dashboard.html" class="menu--link" title="Dashboard">
+
+                        <a href="../TeacherHome/Indexteacherhome" class="menu--link" title="Dashboard">
                             <i class="uil uil-apps menu--icon"></i>
                             <span class="menu--label">Dashboard</span>
                         </a>
                     </li>
                     <li class="menu--item">
-                        <a href="instructor_courses.html" class="menu--link" title="Courses">
+                        <a href="../MyCourses/Indexmycourses" class="menu--link" title="Courses">
                             <i class='uil uil-book-alt menu--icon'></i>
                             <span class="menu--label">Courses</span>
                         </a>
@@ -145,9 +153,9 @@
                         </a>
                     </li>
                     <li class="menu--item">
-                        <a href="../../CreateCourses/Indexcreatecourses" class="menu--link " title="Create Course">
+                        <a href="../CourseTopic/Indexcoursetopic" class="menu--link " title="Create Course">
                             <i class='uil uil-plus-circle menu--icon'></i>
-                            <span class="menu--label">Create Course</span>
+                            <span class="menu--label">Add Topic</span>
                         </a>
                     </li>
 
@@ -155,26 +163,16 @@
 
                 </ul>
             </div>
-            <div class="left_section pt-2">
-                <ul>
-                    <li class="menu--item">
-                        <a href="setting.html" class="menu--link" title="Setting">
-                            <i class='uil uil-cog menu--icon'></i>
-                            <span class="menu--label">Setting</span>
-                        </a>
-                    </li>
 
-                </ul>
-            </div>
         </div>
     </nav>
 
     <div class="wrapper">
         <div class="sa4d25">
             <div class="container-fluid">
-                
+                @*@<input type="text" id="error" name="error" value="" />@*@
 
-                    @RenderBody()
+                @RenderBody()
 
 
             </div>
@@ -263,30 +261,30 @@
                 </div>
             </div>
         </footer>
-        </div>
+    </div>
 
-        <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-        <script src="../../js/vertical-responsive-menu.min.js"></script>
-        <script src="../../js/jquery-3.3.1.min.js"></script>
-        <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="../../vendor/OwlCarousel/owl.carousel.js"></script>
-        @*
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="../../js/vertical-responsive-menu.min.js"></script>
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../vendor/OwlCarousel/owl.carousel.js"></script>
+    @*
         <script src="../../vendor/semantic/semantic.min.js"></script>*@
-        <script src="../../vendor/jquery-ui-1.12.1/jquery-ui.js"></script>
-        <script src="../../js/custom.js"></script>
-        <script src="../../js/night-mode.js"></script>
-        <script src="../../js/jquery-steps.min.js"></script>
-        <script>
-            $('#add-course-tab').steps({
-                onFinish: function () {
-                    alert('Wizard Completed');
-                }
-            });</script>
-        <script>
-            $(function () {
-                $(".sortable").sortable();
-                $(".sortable").disableSelection();
-            });</script>
+    <script src="../../vendor/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="../../js/custom.js"></script>
+    <script src="../../js/night-mode.js"></script>
+    <script src="../../js/jquery-steps.min.js"></script>
+    <script>
+        $('#add-course-tab').steps({
+            onFinish: function () {
+                alert('Wizard Completed');
+            }
+        });</script>
+    <script>
+        $(function () {
+            $(".sortable").sortable();
+            $(".sortable").disableSelection();
+        });</script>
 </body>
 
 

@@ -14,7 +14,7 @@ namespace E_learning.Areas.TeacherArea.Models
 
         public string Course_Level { get; set; }
 
-        public string  Course_Image { get; set; }
-         
+        public string Course_Image { get; set; }
+
     }
 }

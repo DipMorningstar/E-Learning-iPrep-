@@ -2038,6 +2038,18 @@ i.icon1 {
 }
 
 /*--- All Live Streams ---*/
+#Addtopic {
+    height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #fff;
+    border: 0;
+    background: #ed2a26;
+    border-radius: 3px;
+    margin-right: 5px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif !important;
+}
 
 .main-loader {
 	float: left;

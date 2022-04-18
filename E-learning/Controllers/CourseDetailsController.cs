@@ -1,21 +1,16 @@
-﻿using E_learning.Areas.TeacherArea.Models;
-using E_learning.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace E_learning.Areas.TeacherArea.Controllers
+namespace E_learning.Controllers
 {
-    [Area("TeacherArea")]
-    public class TeacherHome : Controller
+    public class CourseDetailsController : Controller
     {
-        public IActionResult Indexteacherhome()
+        public IActionResult IndexCourseDetails()
         {
             String constring = "Data Source =(localdb)\\Local; Initial Catalog = PBC; Trusted_Connection = True";
             SqlConnection sqlcon = new SqlConnection(constring);

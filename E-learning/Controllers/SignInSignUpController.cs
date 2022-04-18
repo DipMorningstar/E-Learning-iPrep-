@@ -14,7 +14,7 @@ namespace E_learning.Controllers
 {
     public class SignInSignUpController : Controller
     {
-        private SqlConnection con = new SqlConnection("Data Source=LAPTOP-5EKSJTJN\\SQLEXPRESS;Initial Catalog=PBC; Trusted_Connection=True");
+        private SqlConnection con = new SqlConnection("Data Source=(localdb)\\Local;Initial Catalog=PBC; Trusted_Connection=True");
         private SqlCommand com = new SqlCommand();
         private SqlDataReader dr;
         private string str;
@@ -32,7 +32,8 @@ namespace E_learning.Controllers
             bool result = VerifyUser(User_email, Password);
             if (result == true)
             {
-                return View("LoginSuccess");
+                //return View("LoginSuccess");
+                return RedirectPermanent("../TeacherArea/TeacherHome/Indexteacherhome");
             }
             else
             {
@@ -49,9 +50,9 @@ namespace E_learning.Controllers
             string msg = "";
             try
             {
-                String constring = "Data Source =LAPTOP-5EKSJTJN\\SQLEXPRESS; Initial Catalog = PBC; Trusted_Connection = True";
+                String constring = "Data Source =(localdb)\\Local; Initial Catalog = PBC; Trusted_Connection = True";
                 SqlConnection sqlcon = new SqlConnection(constring);
-                String pname = "psignup";
+                String pname = "PSignup";
                 sqlcon.Open();
                 SqlCommand com = new SqlCommand(pname, sqlcon);
                 com.Parameters.AddWithValue("@User_name", Request.Form["User_name"].ToString());

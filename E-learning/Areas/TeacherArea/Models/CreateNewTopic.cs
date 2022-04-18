@@ -9,8 +9,10 @@ namespace E_learning.Areas.TeacherArea.Models
     public class CreateNewTopic
     {
         public String Course_code { get; set; }
-        public List<CourseList> Course_name { get; set; }
+        
         public String Topic_name { get; set; }
-        public String Econtent_name { get; set; }
+        public String Topic_Descripton { get; set;  }
+        public String videoUrl { get; set; }
+        public String FileName { get; set; }
     }
 }

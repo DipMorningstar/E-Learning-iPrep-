@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Areas\TeacherArea\Views\Test\Index.cshtml" />
     <None Include="wwwroot\js\site.js" />
   </ItemGroup>
 
