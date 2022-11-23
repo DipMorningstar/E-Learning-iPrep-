@@ -1,0 +1,190 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=9">
+ 
+    <title>Test View</title>
+
+    <link rel="icon" type="image/png" href="../../images/fav.png">
+
+    <link href="../../https://fonts.googleapis.com/css?family=Roboto:400,700,500" rel='stylesheet'>
+    <link href='../../vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
+    <link href="../../css/vertical-responsive-menu.min.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/responsive.css" rel="stylesheet">
+    <link href="../../css/night-mode.css" rel="stylesheet">
+
+    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../../vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+    <link href="../../vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../vendor/semantic/semantic.min.css">
+</head>
+
+<body>
+    <!--HEADER PART(LOGO, AND SOME BUTTON)-->
+    <header class="header clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="back_link">
+                        <a href="../StudentHome/IndexStudentHome" class="hde151">Back To dasbord</a>
+                        <a href="../StudentHome/IndexStudentHome" class="hde152">Back</a>
+                    </div>
+                    <div class="ml_item">
+                        <div class="main_logo main_logo15" id="logo">
+                            <a href="../StudentHome/IndexStudentHome"><img src="../../images/logo_iprep.png" alt=""></a>
+                            <a href="../StudentHome/IndexStudentHome"><img class="logo-inverse" src="../../images/logo_iprep.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+  <!--QUESTION, TIMER, ANSWER OPTION -->
+
+    <div class="wrapper _bg4586 _new89">
+        <div class="_215b15">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="title125">
+                            <div class="titleleft">
+                                <div class="ttl121">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="../StudentHome/IndexStudentHome">Home</a></li>
+
+                                            @*<li class="breadcrumb-item active" aria-current="page">Test View</li>*@
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="title126">
+                            <h2></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="faq1256">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="certi_form rght1528">
+                            <div class="test_timer_bg">
+                                <ul class="test_timer_left">
+                                    <li>
+                                        <div class="timer_time">
+                                            <h4>3</h4>
+                                            <p>Questions</p>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="timer_time">
+                                            <h4 id="timer">10</h4>
+                                            <p>Minutes</p>
+                                        </div>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <div class="certi_form">
+                            @{ 
+                                string startindex = "0";
+                            @foreach (var item in ViewData["Question"] as List<E_learning.Areas.StudentArea.Model.StudentTest>)
+                            {
+
+
+                                <div class="all_ques_lest">
+                                    <div class="ques_item">
+                                        @if (startindex.ToString() != item.QuestionsId.ToString())
+                                        {
+                                            <div class="ques_title">
+                                                @item.Questions
+                                            </div>
+
+                                        }
+
+                                        <div class="ui form">
+                                            <div class="grouped fields">
+                                                <div class="field fltr-radio">
+                                                    <div class="ui radio checkbox">
+                                                        <input type="radio" name="example1" tabindex="0" class="hidden">
+                                                        <label>@item.Question_option</label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                               
+                                startindex = item.QuestionsId;
+
+
+                            }
+                                }
+                            <button class="test_submit_btn" type="submit">Submit Test</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../vendor/OwlCarousel/owl.carousel.js"></script>
+    <!--<script src="../../vendor/semantic/semantic.min.js"></script>-->
+    <script src="../../js/custom.js"></script>
+    <script type="text/javascript">
+        document.getElementById('timer').innerHTML =
+  10 + ":" + 00;
+startTimer();
+
+function startTimer() {
+  var presentTime = document.getElementById('timer').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+  //if(m<0){alert('timer completed')}
+    
+  
+  document.getElementById('timer').innerHTML =
+    m + ":" + s;
+  console.log(m)
+  setTimeout(startTimer, 1000);
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}
+    </script>
+
+
+    <script src="../../js/night-mode.js"></script>
+
+</body>
+
+</html>

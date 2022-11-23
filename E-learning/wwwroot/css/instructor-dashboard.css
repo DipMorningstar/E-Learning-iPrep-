@@ -448,7 +448,7 @@ i.icon1 {
 .header_right {
     margin-left: auto;
     float: right;
-    padding-right: 15px;
+   
 }
 
 .header_right ul li {
@@ -679,7 +679,7 @@ i.icon1 {
 
 /*--- Index Homepage ---*/
 .footer {
-    position:fixed;
+   /* position:fixed;*/
 	background: #333;
 	width: 100%;
 	padding: 0;
@@ -1089,7 +1089,11 @@ i.icon1 {
     width: 100%;
     border-radius: 3px;
     border: 1px solid #efefef;
-	padding: 20px;
+    padding: 20px;
+    transition: transform 0.2s ease;
+}
+.card_dash:hover{
+    transform:scale(1.1);
 }
 
 .card_dash_left {

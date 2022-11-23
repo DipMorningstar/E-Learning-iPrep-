@@ -28,7 +28,10 @@
     <meta name="viewport" content="width=device-width, shrink-to-fit=9">
     <meta name="description" content="gambolthemes">
     <meta name="author" content="gambolthemes">
-    <title>prep - sign up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>iPREP - sign up</title>
 
     <link rel="icon" type="image/png" href="../../images/fav.png">
 
@@ -52,13 +55,13 @@
             <div class="row justify-content-lg-center justify-content-md-center">
                 <div class="col-lg-12">
                     <div class="main_logo25" id="logo">
-                        <a href="../Home/Index"><img src="../../images/logosize-removebg-preview.png" alt=""></a>
-                        <a href="../Home/Index"><img class="logo-inverse" src="../../images/logosize-removebg-preview.png" alt=""></a>
+                        <a href="../Home/Index"><img src="../../images/logo_iprep.png" alt=""></a>
+                        <a href="../Home/Index"><img class="logo-inverse" src="../../images/logo_iprep.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-8">
                     <div class="sign_form">
-                        <h2>welcome to prep</h2>
+                        <h2>welcome to iPREP</h2>
                         <p>sign up and start learning!</p>
 
                         <form asp-controller="SignInSignUp" asp-action="Register">
@@ -69,75 +72,91 @@
                                 @TempData["message"]
                             </div>
                             <!--User Name-->
-                            <div class="ui search focus">
-                                <div class="ui left icon input swdh11 swdh19">
-                                    <input class="prompt srch_explore form-control" type="text" name="User_name" value="" id="id_fullname" required="" maxlength="64" placeholder="full name">
-                                </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="id_fullname" placeholder="Enter name" name="User_name" maxlength="64">
+                                <label for="id_fullname">Name</label>
                             </div>
 
                             <!--User Email-->
-                            <div class="ui search focus mt-15">
-                                <div class="ui left icon input swdh11 swdh19">
-                                    <input class="prompt srch_explore form-control" type="email" name="User_email" value="" id="id_email" required="" maxlength="64" placeholder="email address">
-                                </div>
+                            <div class="form-floating ui search focus mb-3 mt-3">
+                                <input type="text" class="form-control " id="id_email" placeholder="Enter email" name="User_email" maxlength="64">
+                                <label for="id_email">Email</label>
                             </div>
 
                             <!--User Phone number-->
-                            <div class="ui search focus mt-15">
-                                <div class="ui left icon input swdh11 swdh19">
-                                    <input class="prompt srch_explore form-control" type="tel" name="User_Phone" value="" id="id_fullname" required="" maxlength="10" placeholder="Phone Number">
-                                </div>
+                            <div class="form-floating ui search focus mb-3 mt-3">
+                                <input type="tel" class="form-control " id="id_phoneno" placeholder="Enter phone" name="User_Phone" maxlength="10">
+                                <label for="id_phoneno">Phone Number</label>
                             </div>
+
 
                             <!--User Date Of Birth-->
-                            <div class="ui search focus mt-15">
-                                <div class="ui left icon input swdh11 swdh19">
-                                    <input class="prompt srch_explore form-control" type="date" name="DateOfBirth" value="" id="id_fullname" required=""  placeholder="DOB">
-                                </div>
+
+                            <div class="form-floating ui search focus mb-3 mt-3  d-flex align-items-center">
+                                <input type="date" class="form-control " id="id_dob" placeholder="Enter dateofbirth" name="DateOfBirth">
+                                <label for="id_dob">Date of Birth</label>
                             </div>
-                            
+
+
 
                             <!--User Gender-->
-
-
-                            <div class="ui search focus mt-15 border">
-                                <div class="ui left icon input swdh11 swdh19">
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label ml-2 mr-2" for="inlineRadio1">Male</label>
-                                        <input class="form-check-input" type="radio" name="User_gender" id="inlineRadio1" value="Male">
-
+                            <div class="row">
+                                <div class=" form floating ui search focus col-md-12 mb-3">
+                                    <h6 align="left" class="mb-2 pb-1">Gender:</h6>
+                                    <div class="form-check-inline" style="float:left">
+                                        <input class="form-check-input" type="radio"
+                                               name="User_gender" id="inlineRadio1" value="Male" />
+                                        <label align="left" class="form-check-label" for="inlineRadio1">Male</label>
                                     </div>
-
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label ml-2 mr-2" for="inlineRadio1">Female</label>
-                                        <input class="form-check-input" type="radio" name="User_gender" id="inlineRadio2" value="Female">
-
+                                    <div class="form-check form-check-inline" style="float:left">
+                                        <input class="form-check-input" type="radio" name="User_gender" id="inlineRadio2"
+                                               value="Female" />
+                                        <label class="form-check-label" for="inlineRadio2">Female</label>
                                     </div>
-                                    <div class="form-check form-check-inline">
-                                        <label class="form-check-label ml-2 mr-2" for="inlineRadio1">Other</label>
-                                        <input class="form-check-input" type="radio" name="User_gender" id="inlineRadio3" value="Others">
-
+                                    <div class="form-check form-check-inline" style="float:left">
+                                        <input class="form-check-input" type="radio" name="User_gender" id="inlineRadio3"
+                                               value="Others" />
+                                        <label class="form-check-label" for="inlineRadio3">Others</label>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                                    <div class=" form floating ui search focus col-md-12 mb-3">
+                                        <h6 align="left" class="mb-2 pb-1">Role:</h6>
+                                       
+                                        <div class="form-check form-check-inline" style="float:left">
+                                            <input class="form-check-input" type="radio" name="User_role" id="inlineRadio2"
+                                                   value="2" />
+                                            <label class="form-check-label" for="inlineRadio2">Instructor</label>
+                                        </div>
+                                        <div class="form-check form-check-inline" style="float:left">
+                                            <input class="form-check-input" type="radio" name="User_role" id="inlineRadio3"
+                                                   value="3" />
+                                            <label class="form-check-label" for="inlineRadio3">Student</label>
+                                        </div>
                                     </div>
 
                                 </div>
-                            </div>
 
-                            <!---User Password-->
-                            <div class="ui search focus mt-15">
-                                <div class="ui left icon input swdh11 swdh19">
-                                    <input class="prompt srch_explore form-control" type="password" name="Password" value="" id="id_password" required="" maxlength="64" placeholder="password">
+
+
+
+                                <!---User Password-->
+                                <div class="form-floating ui search focus mb-3 mt-3">
+                                    <input type="password" class="form-control " id="id_password" placeholder="Enter password" name="Password" minlength="8" maxlength="12">
+                                    <label for="id_password">Password</label>
                                 </div>
-                            </div>
-
-                            <button class="login-btn" type="submit">Sign Up</button>
 
 
-                        </form>
+                                <button class="login-btn" type="submit">Sign Up</button>
+
+
+</form>
                         <p class="sgntrm145">by signing up, you agree to our <a href="terms_of_use.html">terms of use</a> and <a href="terms_of_use.html">privacy policy</a>.</p>
 
                         <p class="mb-0 mt-30">already have an account? <a href="../SignInSignUp/IndexSignIn">Sign In</a></p>
                     </div>
-                    <div class="sign_footer"><img src="../../images/minilogosize-removebg-preview (1).png" alt="">© 2022 <strong>prep</strong>. all rights reserved.</div>
+                    <div class="sign_footer"><img src="../../images/minilogosize-removebg-preview (1).png" alt="">© 2022 <strong>iPREP</strong>. all rights reserved.</div>
                 </div>
             </div>
         </div>

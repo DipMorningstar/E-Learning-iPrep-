@@ -1,0 +1,318 @@
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.exe
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.deps.json
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.runtimeconfig.json
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.runtimeconfig.dev.json
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.pdb
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.Views.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.Views.pdb
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.AssemblyInfoInputs.cache
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.AssemblyInfo.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.csproj.CoreCompileInputs.cache
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.RazorAssemblyInfo.cache
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.RazorAssemblyInfo.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\staticwebassets\E-learning.StaticWebAssets.Manifest.cache
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\staticwebassets\E-learning.StaticWebAssets.xml
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\scopedcss\bundle\E-learning.styles.css
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.TagHelpers.input.cache
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.TagHelpers.output.cache
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.RazorCoreGenerate.cache
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Areas\TeacherArea\Views\CreateCourses\Indexcreatecourses.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Areas\TeacherArea\Views\TeacherHome\Indexteacherhome.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\ForgetPassword\IndexForgetPasssword.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\Home\Indexlandingpage.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.RazorTargetAssemblyInfo.cache
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.RazorTargetAssemblyInfo.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.Views.pdb
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.csproj.CopyComplete
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.dll
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.pdb
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.genruntimeconfig.cache
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutTeacher.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Areas\TeacherArea\Views\CourseTopic\Indexcoursetopic.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\SignInSignUp\IndexSignIn.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\SignInSignUp\IndexSignUp.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\SignInSignUp\LoginSuccess.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutLandingpage.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Areas\TeacherArea\Views\MyCourses\Indexmycourses.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Grpc.Core.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\Grpc.Core.Api.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\libgrpc_csharp_ext.arm64.so
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libgrpc_csharp_ext.x64.so
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libgrpc_csharp_ext.x64.dylib
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\grpc_csharp_ext.x64.dll
+C:\Users\91822\source\repos\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\grpc_csharp_ext.x86.dll
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Areas\TeacherArea\Views\Test\Index.cshtml.g.cs
+C:\Users\91822\source\repos\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.csproj.AssemblyReference.cache
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\appsettings.json
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.StaticWebAssets.xml
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.exe
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.deps.json
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.runtimeconfig.json
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.runtimeconfig.dev.json
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.pdb
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.Views.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\E-learning.Views.pdb
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Grpc.Core.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Grpc.Core.Api.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\libgrpc_csharp_ext.arm64.so
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libgrpc_csharp_ext.x64.so
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libgrpc_csharp_ext.x64.dylib
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\grpc_csharp_ext.x64.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\grpc_csharp_ext.x86.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.AccessControl.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.GeneratedMSBuildEditorConfig.editorconfig
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.AssemblyInfoInputs.cache
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.AssemblyInfo.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.csproj.CoreCompileInputs.cache
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.MvcApplicationPartsAssemblyInfo.cache
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.RazorAssemblyInfo.cache
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.RazorAssemblyInfo.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\staticwebassets\E-learning.StaticWebAssets.Manifest.cache
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.TagHelpers.input.cache
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.TagHelpers.output.cache
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.RazorCoreGenerate.cache
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Areas\TeacherArea\Views\CourseTopic\Indexcoursetopic.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Areas\TeacherArea\Views\CreateCourses\Indexcreatecourses.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Areas\TeacherArea\Views\MyCourses\Indexmycourses.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Areas\TeacherArea\Views\TeacherHome\Indexteacherhome.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\ForgetPassword\IndexForgetPasssword.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\Home\Indexlandingpage.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutLandingpage.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutTeacher.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\SignInSignUp\IndexSignIn.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\SignInSignUp\IndexSignUp.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\SignInSignUp\LoginSuccess.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.RazorTargetAssemblyInfo.cache
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.RazorTargetAssemblyInfo.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.Views.pdb
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.csproj.CopyComplete
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.dll
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.pdb
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.genruntimeconfig.cache
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutCourseDetails.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Web.Mvc.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Sitecore.FakeDb.dll
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Areas\StudentArea\Views\ShowCoursesList\IndexShowCoursesList.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Areas\StudentArea\Views\StudentHome\IndexStudentHome.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutStudent.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Views\dummyIndex.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Areas\TeacherArea\Views\CourseDetails\IndexCourseDetails.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Areas\StudentArea\Views\StudentTest\IndexStudentTest.cshtml.g.cs
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Internship final project\E-learning\E-learning\E-learning\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\E-learning.csproj.AssemblyReference.cache
+E:\Internship final project\E-learning\E-learning\E-learning\obj\Debug\netcoreapp3.1\Razor\Areas\StudentArea\Views\SavedCourse\IndexSavedCourse.cshtml.g.cs

@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -14,6 +15,7 @@ namespace E_learning
     {
         public Startup(IConfiguration configuration)
         {
+
             Configuration = configuration;
         }
 
@@ -22,7 +24,10 @@ namespace E_learning
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // add session part
+            services.AddSession(options=>{ options.IdleTimeout = TimeSpan.FromMinutes(60); });
             services.AddControllersWithViews();
+            services.AddHttpContextAccessor();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,7 +45,11 @@ namespace E_learning
 
             app.UseRouting();
 
+            //use session
+            app.UseSession();
+
             app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {
@@ -49,8 +58,13 @@ namespace E_learning
                       pattern: "{area:exists}/{controller=teacherdashbord}/{action=indexteacherdashboard}/{id?}"
 
                     );
+                endpoints.MapControllerRoute(
+                   name: "areas",
+                     pattern: "{area:exists}/{controller=TeacherHome}/{action=indexteacherhome}/{id?}"
 
-                 
+                   );
+
+
 
                 endpoints.MapControllerRoute(
                    name: "default",

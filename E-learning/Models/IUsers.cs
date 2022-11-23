@@ -7,6 +7,7 @@ namespace E_learning.Models
 {
     interface IUsers
     {
+    
         bool Verify(string User_email, string Password);
 
         bool Register(Users u);

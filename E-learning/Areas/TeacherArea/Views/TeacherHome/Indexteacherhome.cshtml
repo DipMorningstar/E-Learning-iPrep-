@@ -1,55 +1,160 @@
 ﻿@using System.Data;
 
 @{ Layout = "/Views/Shared/_LayoutTeacher.cshtml"; }﻿
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor Accessor
+
+<style>
 
 
 
 
 
-<!--our featured courses-->
 
-<div class="container-fluid ">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="aligncenter">
-                <h1 class="aligncenter">Our Featured Courses</h1><span class="clear spacer_responsive_hide_mobile " style="height:13px;display:block;"></span>
+    .card_dash:hover {
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.0); /* Safari 3-8 */
+        transform: scale(1.1);
+    }
+</style>
 
+
+<body>
+
+    <!-- TEACHER DETAILS CARD-->
+
+
+
+
+    <div class="sa4d25">
+        <div class="container-fluid">
+            <div class="row" id="card">
+                <div class="col-lg-12">
+                    <h2 class="st_title"><i class="uil uil-apps"></i> Instructor Dashboard</h2>
+                </div>
+
+
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="card_dash">
+                        <div class="card_dash_left">
+                            <h5>Total Enroll</h5>
+                            <h2>@ViewData["TotalEnrolled"]</h2>
+                            @*<span class="crdbg_2"></span>*@
+
+                        </div>
+                        <div class="card_dash_right">
+                            <img src="../../images/dashboard/graduation-cap.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="card_dash">
+                        <div class="card_dash_left">
+                            <h5>Total Courses</h5>
+                            <h2> @ViewData["TotalCourses"]</h2>
+                            @*<span class="crdbg_3">New 5</span>*@
+
+                        </div>
+                        <div class="card_dash_right">
+                            <img src="../../images/dashboard/online-course.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <div class="card_dash">
+                        <div class="card_dash_left">
+                            <h5>Total Students</h5>
+                            <h2>@ViewData["TotalStudents"]</h2>
+                            @*<span class="crdbg_4">New 245</span>*@
+                        </div>
+                        <div class="card_dash_right">
+                            <img src="../../images/dashboard/knowledge.svg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!--content featured courses-->
-<section id="content">
-    <div class="container-fluid">
+
+
+    <!--our featured courses-->
+
+    <div class="container-fluid ">
         <div class="row">
+            <div class="col-lg-12">
+                <div class="aligncenter">
+                    <h1 class="aligncenter" style="margin-top:50px">Our Featured Courses</h1><span class="clear spacer_responsive_hide_mobile " style="height:13px;display:block;"></span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--content featured courses-->
+    <section id="content">
+        <div class="carousel" data-flickity='{ "groupCells": true }'>
+
+
 
             @foreach (DataRow row in Model.Rows)
             {
-<div class="col-lg-3 col-md-6">
+
+
+<div class="carousel-cell col-md-4">
     <div class="fcrse_1 mt-30">
+
         <!--Image of Course-->
+
         <a class="fcrse_img">
 
             <img src="@row["course_image"]" alt="" style="height: 170.59px ">
-         
+
 
         </a>
-        <div class="fcrse_content">
+        <div class="row">
+            <div class="col-10">
+                <div class="fcrse_content">
 
-            <!--Course Details-->
-
-            <a href="../../CourseDetails/IndexCourseDetails" class="crse-cate"><h3>@row["Course_Title"]</h3> </a>
-            <a href="#" class="crse-cate">@row["Course_Category"] </a>
-            <a href="#" class="crse-cate">@row["Course_Level"]</a>
+                    <!--Course Details-->
 
 
+                    <a href="/TeacherArea/CourseDetails/IndexCourseDetails?Course_id=@row["Course_id"]" class="crse-cate">@row["Course_Title"] </a>
+                    <a href="/TeacherArea/CourseDetails/IndexCourseDetails?Course_id=@row["Course_id"]" class="crse-cate">@row["Course_Category"] </a>
+                    <a href="/TeacherArea/CourseDetails/IndexCourseDetails?Course_id=@row["Course_id"]" class="crse-cate">@row["Course_Level"]</a>
+
+
+
+                </div>
+
+            </div>
+            <div class="col-2">
+                @if (row["CanEdit"].ToString() != "0")
+                {
+    <div class="_215b05">
+        <ul class="_215b31">
+            <li><a href="/TeacherArea/CourseTopic/Indexcoursetopic" value="Edit" class="main-btn color" style="margin-top:180px; padding: 12px 19px 12px 15px">Edit</a></li>
+        </ul>
+    </div>}
+            </div>
         </div>
     </div>
 </div>}
 
         </div>
-    </div>
-</section>
 
-<!--content featured courses end-->
+
+
+
+
+    </section>
+
+
+
+
+
+
+    <!--content featured courses end-->
+
+</body>

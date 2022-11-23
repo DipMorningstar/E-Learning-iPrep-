@@ -3,6 +3,7 @@
      }
 
 <body>
+    <!------!!!!!!!!!!!!!  EDITIOR IS NOT FULLY FUNCTIONAL WE HAVE TO ADD SOME PLUGINS !!!!!!!!!!!!-->
 
     <div class="sa4d25">
         <div class="container">
@@ -11,12 +12,13 @@
                     <h2 class="st_title"><i class="uil uil-analysis"></i> Create New Course</h2>
                 </div>
             </div>
-            <form action="IndexcreatecoursesSave" method="post">
+            <form action="IndexcreatecoursesSave" method="post" id="form_course" onsubmit="return validateform()">
 
                 <!--alert message-->
-                @*<div style="color:red;" class="alert alert-danger">
-                        @ViewBag.result
-                    </div>*@
+               <div style="color:red">
+                   <h3> @TempData["Msg"]</h3>
+                </div>
+
 
                 <div class="row">
                     <div class="col-12">
@@ -29,14 +31,14 @@
                                         </div>
 
 
-                                        <div class="course__form">
+                                        <div class="course__form"  >
                                             <div class="general_info10">
                                                 <div class="row">
                                                     <div class="col-lg-12 col-md-12">
                                                         <div class="ui search focus mt-30 lbel25">
                                                             <label>Course Name*</label>
                                                             <div class="ui left icon input swdh19">
-                                                                <input class="prompt srch_explore" type="text" placeholder="Course Name here" name="Course_name" required="" data-purpose="edit-course-title" maxlength="60" id="main[title]" value="">
+                                                                <input class="prompt srch_explore" autocomplete="off" type="text"  placeholder="Course Name here" oninput="setCustomValidity('')" autofocus oninvalid="this.setCustomValidity('Get Lost')" name="Course_name" required   data-purpose="edit-course-title" minlength="5" maxlength="60" id="main[title]" value="" >
                                                                 <div class="badge_num">60</div>
                                                             </div>
                                                             <div class="help-block">(Please make this a maximum of 60 characters and unique.)</div>
@@ -46,23 +48,23 @@
                                                         <div class="ui search focus mt-30 lbel25">
                                                             <label>Course Title*</label>
                                                             <div class="ui left icon input swdh19">
-                                                                <input class="prompt srch_explore" type="text" placeholder="Course title here" name="Course_Title" required="" data-purpose="edit-course-title" maxlength="60" id="main[title]" value="">
+                                                                <input class="prompt srch_explore" type="text" placeholder="Course title here" name="Course_Title" required=""  data-purpose="edit-course-title" maxlength="60" id="main[title]" value="">
                                                                 <div class="badge_num">60</div>
                                                             </div>
                                                             <div class="help-block">(Please make this a maximum of 60 characters and unique.)</div>
                                                         </div>
                                                     </div>
                                                     <!--  <div class="col-lg-12 col-md-12">
-                                                        <div class="ui search focus lbel25 mt-30">
-                                                            <label>Short Description*</label>
-                                                            <div class="ui form swdh30">
-                                                                <div class="field">
-                                                                    <textarea rows="3" name="Course_Description" id="" placeholder="Course description here..."></textarea>
-                                                                </div>
-                                                            </div>
-                                                            <div class="help-block">220 words</div>
-                                                        </div>
-                                                    </div>-->
+                                            <div class="ui search focus lbel25 mt-30">
+                                                <label>Short Description*</label>
+                                                <div class="ui form swdh30">
+                                                    <div class="field">
+                                                        <textarea rows="3" name="Course_Description" id="" placeholder="Course description here..."></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="help-block">220 words</div>
+                                            </div>
+                                        </div>-->
                                                     <div class="col-lg-12 col-md-12">
                                                         <div class="course_des_textarea mt-30 lbel25">
                                                             <label>Course Description*</label>
@@ -81,7 +83,7 @@
                                                                 <div class="textarea_dt">
                                                                     <div class="ui form swdh339">
                                                                         <div class="field">
-                                                                            <textarea rows="5" name="Course_Description" required="" id="id_course_description" placeholder="Insert your course description"></textarea>
+                                                                            <textarea rows="5" name="Course_Description"  id="id_course_description" required="" placeholder="Insert your course description"></textarea>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -89,22 +91,22 @@
                                                         </div>
                                                     </div>
                                                     <!-- <div class="col-lg-6 col-md-12">
-                                                        <div class="ui search focus lbel25 mt-30">
-                                                            <label>What will students learn in your course?*</label>
-                                                            <div class="ui form swdh30">
-                                                                <div class="field">
-                                                                    <textarea rows="3" name="Course_Description" id="" placeholder=""></textarea>
-                                                                </div>
-                                                            </div>
-                                                            <div class="help-block">Student will gain this skills, knowledge after completing this course. (One per line).</div>
-                                                        </div>
-                                                    </div>-->
+                                            <div class="ui search focus lbel25 mt-30">
+                                                <label>What will students learn in your course?*</label>
+                                                <div class="ui form swdh30">
+                                                    <div class="field">
+                                                        <textarea rows="3" name="Course_Description" id="" placeholder=""></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="help-block">Student will gain this skills, knowledge after completing this course. (One per line).</div>
+                                            </div>
+                                        </div>-->
 
                                                     <div class="col-lg-6 col-md-12">
                                                         <div class="mt-30 lbel25">
                                                             <label>Course Level*</label>
                                                         </div>
-                                                        <select class="ui hj145 dropdown cntry152 prompt srch_explore" required="" name="Course_Level">
+                                                        <select class="ui hj145 dropdown cntry152 prompt srch_explore" required=""  name="Course_Level">
                                                             <option value="">Select Level</option>
                                                             <option value="Beginner">Beginner</option>
                                                             <option value="Intermediate">Intermediate</option>
@@ -139,14 +141,14 @@
                                                         <div class="ui search focus mt-30 lbel25">
                                                             <label>Course image*</label>
                                                             <div class="ui left icon input swdh19">
-                                                                <input class="prompt srch_explore" type="file" placeholder="Course image here" required="" name="Course_Image" data-purpose="edit-course-title" maxlength="60" id="main[title]" onchange="encodeImgtoBase64(this)">
+                                                                <input class="prompt srch_explore" type="file" placeholder="Course image here" required=""  name="Course_Image" data-purpose="edit-course-title" maxlength="60" id="main[title]" onchange="encodeImgtoBase64(this)">
                                                                 <input id="convertImg" name="convertImg" type="hidden" />
 
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>  
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -158,7 +160,7 @@
 
                     <div class="step-footer step-tab-pager">
 
-                        <button data-direction="finish" class="btn btn-default steps_btn" onclick="show_alert()">Submit</button>
+                        <button data-direction="finish" class="btn btn-default steps_btn"   @*onclick="show_alert()*@">Submit</button>
                     </div>
 
                 </div>
@@ -192,7 +194,34 @@
 
             reader.readAsDataURL(img);
 
+
         }
 
+        //function validateform() {
+        //    let x = document.forms[form_course][course_name].value;
+        //    if (x == "") {
+        //        alert("course_name must be filled.");
+        //        return false;
+        //    }
+           
+        //}
+
+
+        //$(document).ready(function () {
+        //    $("#form_course").validate({
+
+        //        rules: {
+
+        //            'Course_name': {
+        //                required: true,
+        //                minlength: 5,
+        //                maxlength: 60
+        //            }
+        //        },
+        //        messages: {
+        //            'Course_name':"Please Enter Course Name."
+        //        }
+        //    });
+        //});
     </script>
 </body>

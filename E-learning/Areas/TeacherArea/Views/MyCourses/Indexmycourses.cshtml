@@ -4,8 +4,8 @@
 <body>
 
 
-
-
+    <!---TEACHER'S COURSE LIST-->
+    <!-- !!!!!!!!!!!! EDIT ,UPDATE AND SAVE THAT IS FROM CRUD OPERATION IS LEFT FOR EDITING COURSE!!!!!!!!!-->
     <div class="sa4d25">
         <div class="container-fluid">
             <div class="row">
@@ -36,7 +36,7 @@
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-my-courses" role="tabpanel">
                                 <div class="table-responsive mt-30">
-                                    <table class="table ucp-table">
+                                    <table class="table ucp-table" id="coursetable">
                                         <thead class="thead-s">
                                             <tr>
                                                 <th class="text-center" scope="col">Course Name</th>
@@ -53,25 +53,32 @@
                                         <tbody>
                                             @foreach (DataRow row in Model.Rows)
                                             {
-                                            <tr>
-                                                <td class="text-center">@row["Course_name"]</td>
-                                                <td class="text-center">@row["Course_Title"]</td>
-                                                <td class="text-center">@row["EntryDateTime"]</td>
-                                                <td class="text-center">@row["Course_Category"]</td>
-                                                <td class="text-center"><b class="course_active">@row["Status"]</b></td>
-                                                <td class="text-center">
-                                             
-                                                    <a href="#" title="Delete" name="dltbutton" value="Delete" class="gray-s">@ViewBag.Deletebutton<i class="uil uil-trash-alt"></i></a>
-                                                </td>
+                                <tr>
+                                    <td class="text-center">@row["Course_name"]</td>
+                                    <td class="text-center">@row["Course_Title"]</td>
+                                    <td class="text-center">@row["EntryDateTime"]</td>
+
+                                    <td class="text-center">@row["Course_Category"]</td>
+                                    <td class="text-center"><b class="course_active">@row["Status"]</b></td>
 
 
-                                            </tr>}
+                                    <!--- !!!!!!!!!! PLEASE ADD HERE EDIT, UPDATE, SAVE AND CANCEL OPERATION!!!!!!!-->
+                                    <td class="text-center">
+                                        <a class="gray-s Edit" href="javascript:;"> <i class="uil uil-edit-alt"></i></a>|
+                                        <a class="gray-s Update" href="javascript:;"> Update</a>|
+                                        <a class="gray-s Cancel" href="javascript:;"> Cancel</a>|
+                                        <a href="/TeacherArea/MyCourses/deletecourse?Course_id=@row["Course_id"]" title="Delete" value="deletecourse" class="gray-s Delete" onclick="return confirm('Are you sure you want to delete  @row["Course_name"]');"><i class="uil uil-trash-alt"></i></a>
+                                    </td>
+
+
+                                </tr>
+}
                                         </tbody>
 
                                     </table>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -91,5 +98,23 @@
     <script src="../../js/night-mode.js"></script>
     <script src="../../js/datepicker.min.js"></script>
     <script src="../../js/i18n/datepicker.en.js"></script>
+    @*<script type="text/javascript">
+        $("body").on("click", "#coursetable.Edit", function ()
+        {
+            var row = $(this).closest("tr");
+            $("td", row).each(function () {
+                if ($(this).find("input").length > 0) {
+                    $(this).find("input").show();
+                    $(this).find("span").hide();
+                }
+            });
+            row.find(".Update").show();
+            row.find(".Cancel").show();
+            row.find(".Delete").hide();
+            $(this).hide();
+        });
+
+    </script>*@
+    
 </body>
 

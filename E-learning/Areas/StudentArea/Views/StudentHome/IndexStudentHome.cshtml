@@ -1,0 +1,201 @@
+﻿ @{ Layout = "/Views/Shared/_LayoutStudent.cshtml"; }﻿
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor Accessor
+
+
+
+@using System.Data;
+
+
+<body>
+
+    <!--banner-->
+
+
+    <div class="sa4d25">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="jumbotron text-center bg-gradient-success col-12 mr-2" height="268.8px" style="background-color:crimson">
+
+
+
+                    <div class="row">
+
+                        <div class="col-6" style="color:aliceblue">
+                            <h1 id="bannertagline" style="font-size:20px; text-align:left">WELCOME BACK! @Accessor.HttpContext.Session.GetString("User_Name")</h1>
+
+
+
+                            <a href="#" class="btn btn-outline-info btn-lg" style="margin-top:100px" title="learnmore">Learn More</a>
+
+                        </div>
+
+                        <div class="col-3 " style="margin-left:80px">
+                            <img src="../../images/studenthomebanner2.png" alt="" class="responsive" style=" width:220px; height:auto" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <style>
+        .table-hover > thead > tr:hover > td {
+            background-color: lightcoral;
+        }
+    </style>
+    <!---banner end-->
+
+
+
+
+
+    <!---Course progress bar-->
+
+
+
+    @if (((List<E_learning.Areas.StudentArea.Model.StudentHome>)ViewData["Enrolled"]).Count>0)
+    {
+    <div class="container-fluid">
+        <div class="row mb-10">
+
+            <div class="col-9">
+                <div class="section3125 mt-50">
+                    <h4 class="item_title">My Recent Activity</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12">
+                <div class="row">
+
+                    @foreach (var item in ViewData["Enrolled"] as List<E_learning.Areas.StudentArea.Model.StudentHome>)
+                    {
+
+                        <div class="col-xl-4 col-lg-4 col-md-4 shadow-lg p-3 mb-5  bg-body rounded" style="margin-left:50px">
+
+                            <a href="/TeacherArea/CourseDetails/EnrollCourse?Course_id=@item.Course_id" class="crse-cate mb-2"><h3>@item.Course_name</h3> </a>
+
+                            <h4 class="crse-cate">@item.Course_Category </h4>
+
+                            <div class="progress mt-3">
+                                <div class="progress-bar" role="progressbar" style="width: @item.Percentage%;" aria-valuenow="@item.Percentage" aria-valuemin="0" aria-valuemax="100">@item.Percentage%</div>
+                            </div>
+
+                        </div>
+
+                    }
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    }
+    <!---Couress progress bar END-->
+
+    <div class="container-fluid ">
+        <div class="row">
+            <div class="col-lg-11">
+                <div class="section3125 ">
+                    <h4 class="item_title">
+                        Our Featured Courses
+
+                    </h4>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!--content featured courses-->
+    
+
+
+    <section id="content">
+        <div class="carousel" data-flickity='{ "groupCells": true }'>
+            @foreach (DataRow row in Model.Rows)
+            {
+
+
+<div class="carousel-cell col-md-4">
+    <div class="fcrse_1 mt-30">
+
+        <!--Image of Course-->
+        <a class="fcrse_img">
+
+            <img src="@row["course_image"]" alt="" style="height: 170.59px ">
+
+
+        </a>
+        <div class="row">
+            <div class="col-8">
+                <div class="fcrse_content">
+
+                    <!--Course Details-->
+
+
+                    <a href="/TeacherArea/CourseDetails/IndexCourseDetails?Course_id=@row["Course_id"]" class="crse-cate">@row["Course_Title"] </a>
+                    <a href="/TeacherArea/CourseDetails/IndexCourseDetails?Course_id=@row["Course_id"]" class="crse-cate">@row["Course_Category"] </a>
+                    <a href="/TeacherArea/CourseDetails/IndexCourseDetails?Course_id=@row["Course_id"]" class="crse-cate">@row["Course_Level"]</a>
+
+
+
+
+
+                </div>
+                </div>
+            <div class="col-4">
+                @if (row["EnrolStatus"].ToString() != "Enrolled")
+                {
+
+                    <div class="_215b05">
+                        <ul class="_215b31">
+                            <li>
+                                <a href="/StudentArea/StudentHome/EnrolledCourse?Course_id=@row["Course_id"]" id="Enrollbtn"
+                                   class="main-btn color" style=" margin-top:180px; padding: 12px 19px 12px 15px; background-color: red; color: white; border-radius: 4px " title="submit" value="EnrolledCourse">Enroll Now</a>
+                            </li>
+                        </ul>
+                    </div>}
+            </div>
+            </div>
+        </div>
+</div>}
+        </div>
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>

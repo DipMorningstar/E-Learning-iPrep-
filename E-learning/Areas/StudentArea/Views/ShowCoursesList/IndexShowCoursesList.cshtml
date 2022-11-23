@@ -1,0 +1,48 @@
+﻿@using System.Data;
+
+
+
+@{ Layout = "/Views/Shared/_LayoutStudent.cshtml"; }
+
+<body>
+
+
+    <!--LIST OF COURSES THAT STUDENT ENROLLED PAGE-->
+
+    <div class="container-fluid">
+        <div class="row">
+           
+            <div class="col-md-9">
+                <div class="_14d25 mb-20">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="mhs_title">My Courses</h4>
+                            @foreach (DataRow row in Model.Rows)
+                            {
+                                <div class="fcrse_1 mt-3">
+                                    <a href="course_detail_view.html" class="hf_img">
+                                        <img src="@row["Course_image"]" alt="">
+                                    </a>
+                                    <div class="hs_content">
+                                        
+                                        <a href="course_detail_view.html" class="crse14s title">@row["Course_Title"]</a>
+                                        <a href="#" class="crse-cate">@row["Course_Category"] | @row["Course_Level"]</a>
+
+                                      
+
+
+                                    </div>
+                                </div>
+
+                            }
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+

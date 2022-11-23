@@ -3,6 +3,32 @@
 
 <body>
     <!---DropDown Course name and Show And Add Topic Button-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!----!!!!!!!!!!!!ATTACHMENT LIKE PDF, WORD FILE UPLOAD IS REMAINED -->
+    <!----!!!!!!!!!RUNTIME QUESTION FIELD IS LEFT ( LIKE HOW MANY NUMBER OF QUESTION TEACHER WANTS TO GENERATE)-->
+    <!---!!!!!!!!!!!!! RADIO BUTTON IS NOT WORKING PROPERLY---->
+
+    <!----!!!!!!! EDITIOR IS NOT FULLY FFUNCTIONAL NEED TO ADD SOME PLUGINS!!!!!!!!!!-->
+
+
+
+
+
+
+
+
     <div class="sa4d25">
         <div class="container">
             <div class="row">
@@ -26,7 +52,8 @@
                                         <div class="col-md-6 col-lg-6">
                                             <select class="ui hj145 dropdown cntry152 prompt srch_explore" name="CrList">
                                                 @foreach (var item in ViewData["CoursesList"] as List<E_learning.Areas.TeacherArea.Models.CourseList>)
-                                                {
+                                                { 
+                                                
                                                     <option value="@item.courseId">@item.coursename</option>
                                                 }
                                             </select>
@@ -69,10 +96,10 @@
                             <h4 class="section-title mt-0"> Select Course</h4>
                         </div>
                         <div class="col-md-6 col-lg-6">
-                            <select class="ui hj145 dropdown cntry152 prompt srch_explore" name="CrList">
+                            <select class="ui hj145 dropdown cntry152 prompt srch_explore" required="" name="CrList">
                                 @foreach (var item in ViewData["CoursesList"] as List<E_learning.Areas.TeacherArea.Models.CourseList>)
                                 {
-                                    <option value="@item.CourseCode">@item.coursename</option>
+                                    <option value="@item.CourseCode" >@item.coursename</option>
                                 }
                             </select>
                         </div>
@@ -93,7 +120,7 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="ui search focus lbel25 mt-30">
                                     <label>Topic Name*</label>
-                                    <input class="form_input_1" type="text" name="Topic_name" placeholder="Topic Name here">
+                                    <input class="form_input_1" type="text" required="" name="Topic_name" placeholder="Topic Name here">
                                 </div>
                             </div>
 
@@ -116,7 +143,7 @@
                                         <div class="textarea_dt">
                                             <div class="ui form swdh339">
                                                 <div class="field">
-                                                    <textarea rows="5" name="Topic_Description" id="id_course_description" placeholder="Insert your Topic description"></textarea>
+                                                    <textarea rows="5" required="" name="Topic_Description" id="id_course_description" placeholder="Insert your Topic description"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -128,7 +155,7 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="ui search focus lbel25 mt-30">
                                     <label>Video URL*</label>
-                                    <input class="form_input_1" type="text" name="videoUrl" placeholder="Video URL here">
+                                    <input class="form_input_1" required="" type="text" name="videoUrl" placeholder="Video URL here">
                                 </div>
                             </div>
 
@@ -136,7 +163,7 @@
                             <div class="col-lg-12 col-md-12">
                                 <div class="ui search focus lbel25 mt-30">
                                     <label>External URL*</label>
-                                    <input class="form_input_1" type="text" name="URL" placeholder="External URL here">
+                                    <input class="form_input_1" required="" type="text" name="URL" placeholder="External URL here">
                                 </div>
                             </div>
 
@@ -144,7 +171,7 @@
                                 <div class="ui search focus lbel25 mt-30">
                                     <div class="upload-btn">
                                         <label>Attachment*</label>
-                                        <input class="uploadBtn-main-input" name="FileName" type="file" id="SourceFile__input--source">
+                                        <input class="uploadBtn-main-input" required="" name="FileName" type="file" id="SourceFile__input--source" onclick="attachment(element)">
                                         <label for="SourceFile__input--source" title="Zip"><i class="far fa-plus-square mr-2"></i>Add File here</label>
                                     </div>
                                     <span class="uploadBtn-main-file">Supports: jpg, jpeg, png, pdf or .zip</span>
@@ -161,7 +188,7 @@
                     <div class="modal-header">
                         <div class="nav nav-pills flex-column flex-sm-row nav-tabs" role="tablist">
 
-                            <a class="flex-sm-fill text-sm-center nav-link active" data-toggle="tab" href="#nav-lecture" id="addlecture" role="tab" aria-selected="true" style="background-color: #ed2a26"><i class="fas fa-file-alt mr-2"></i>Add Quiz</a>
+                            <a class="flex-sm-fill text-sm-center nav-link active"  data-toggle="tab" href="#nav-lecture" id="addlecture" role="tab" aria-selected="true" style="background-color: #ed2a26"><i class="fas fa-file-alt mr-2"></i>Add Quiz</a>
                             @*<a class="flex-sm-fill text-sm-center nav-link " data-toggle="tab" href="#nav-quiz" id="#addquiz" role="tab" aria-selected="false" style="background-color: #ed2a26"><i class="fas fa-stream mr-2"></i>Add Quiz </a>*@
                         </div>
 
@@ -169,7 +196,15 @@
 
                     <div class="modal-body">
                         <div class="row">
+                            @*<div class="col-md-6 col-lg-6">
+                                <select class="ui hj145 dropdown cntry152 prompt srch_explore" name="topiclist">
+                                    @foreach (var item in ViewData["TopicList"] as List<E_learning.Areas.TeacherArea.Models.Showtopic>)
+                                    {
 
+                                        <option value="@item.Topic_id">@item.Topic_name</option>
+                                    }
+                                </select>
+                            </div>*@
                             <div class="col-lg-12">
                                 <div>
                                     @for (int i = 1; i <= 3; i++)
@@ -178,7 +213,7 @@
                                             <div class="ui search focus lbel25 mt-30">
 
                                                 <label>Question @i</label>
-                                                <input class="form_input_1" type="text" placeholder="Question Name here" name="Question_@i">
+                                                <input class="form_input_1" type="text" required="" placeholder="Question Name here" name="Question_@i">
                                             </div>
 
                                             <div class="container">
@@ -187,27 +222,27 @@
 
                                                         A <input id="Radio1" type="radio" value="A" class="radio-item btn-group" onclick="showalert();" name="OptionA_@i" />
 
-                                                        <input class="form_input_1" type="text" name="Questions_options" placeholder="Answer Option here" />
+                                                        <input class="form_input_1" required="" type="text" name="Questions_options_A_@i" placeholder="Answer Option here" />
 
                                                     </div>
                                                     <div class="col-lg-5 mr-md-5 mt-md-3">
 
-                                                        B <input id="Radio1" type="radio" value="B" class="radio-item btn-group" onclick="alert('This is the correct answer');" name="OptionA_@i" />
-                                                        <input class="form_input_1" type="text" name="Questions_options" placeholder="Answer Option here" />
+                                                        B <input id="Radio1" type="radio" value="B" class="radio-item btn-group" name="OptionB_@i" onclick="alert('This is the correct answer');" />
+                                                        <input class="form_input_1" type="text" required="" name="Questions_options_B_@i" placeholder="Answer Option here" />
 
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-lg-5 mr-md-5 mt-md-3">
 
-                                                        C <input id="Radio1" type="radio" value="C" class="radio-item btn-group" onclick="alert('This is the correct answer');" name="OptionA_@i" />
-                                                        <input class="form_input_1" type="text" name="Questions_options" placeholder="Answer Option here" />
+                                                        C <input id="Radio1" type="radio" value="C" class="radio-item btn-group" name="OptionC_@i" onclick="alert('This is the correct answer');" />
+                                                        <input class="form_input_1" type="text" required="" name="Questions_options_C_@i" placeholder="Answer Option here" />
 
                                                     </div>
                                                     <div class="col-lg-5 mr-md-5 mt-md-3">
 
-                                                        D  <input id="Radio1" type="radio" value="D" class="radio-item btn-group" onclick="alert('This is the correct answer');" name="OptionA_@i" />
-                                                        <input class="form_input_1" type="text" name="Questions_options" placeholder="Answer Option here" />
+                                                        D  <input id="Radio1" type="radio" value="D" class="radio-item btn-group" name="OptionD_@i" onclick="alert('This is the correct answer');" />
+                                                        <input class="form_input_1" type="text" required="" name="Questions_options_D_@i" placeholder="Answer Option here" />
 
 
                                                     </div>
@@ -267,16 +302,16 @@
                                     <table class="table ucp-table">
                                         <thead class="thead-s">
                                             <tr>
-                                                <th class="text-center" scope="col">Course Code</th>
+                                                <th class="text-center col-1" scope="col">Course Code</th>
 
-                                                <th class="text-center" scope="col">Topic Name</th>
+                                                <th class="text-center col-1" scope="col">Topic Name</th>
 
-                                                <th class="text-center" scope="col">Topic Description</th>
+                                                <th class="text-center col-5" scope="col">Topic Description</th>
 
-                                                <th class="text-center" scope="col">Econtent</th>
+                                                <th class="text-center col-2" scope="col">Econtent</th>
 
-                                                <th class="text-center" scope="col">Status</th>
-                                                <th class="text-center" scope="col">Action</th>
+                                                <th class="text-center col-1" scope="col">Status</th>
+                                                <th class="text-center col-2" scope="col">Action</th>
                                             </tr>
                                         </thead>
 
@@ -285,18 +320,19 @@
 
                                             @if (ViewData["TopicList"] != null)
                                             {
+
                                                 @foreach (var item in ViewData["TopicList"] as List<E_learning.Areas.TeacherArea.Models.Showtopic>)
                                                 {
                                                     <tr>
-                                                        <td class="text-center">@item.Course_code</td>
+                                                        <td class="text-center ">@item.Course_code</td>
                                                         <td class="text-center">@item.Topic_name</td>
                                                         <td class="text-center">@item.Topic_Description</td>
 
-                                                        <td class="text-center"> <a class="main-btn color" data-toggle="modal" data-target="#show_econtent_model">Show EContent</a></td>
+                                                        <td class="text-center"> <a class="main-btn color" data-toggle="modal" onclick="GetContent('@item.Topic_id')" data-target="#show_econtent_model" >View</a></td>
                                                         <td class="text-center"> <b class="course_active"></b>@item.Status</td>
                                                         <td class="text-center">
 
-                                                            <a href="#" type="submit" name="dltbutton" value="Delete" class="gray-s">@ViewBag.Deletebutton<i class="uil uil-trash-alt"></i></a>
+                                                            <a href="#" type="submit"  name="dltbutton" value="Delete" class="gray-s">@ViewBag.Deletebutton<i class="uil uil-trash-alt"></i></a>
                                                         </td>
                                                     </tr>
                                                 }
@@ -321,31 +357,51 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">EContent</h5>
+                    <h5 class="modal-title">EContent</h5> 
+
+
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                     <div class="table-responsive mt-30">
-                        <table class="table ucp-table">
-                            <thead class="thead-s">
-                                <tr>
-                                    <th class="text-center" scope="col">Video URL</th>
 
-                                    <th class="text-center" scope="col">Other URL</th>
+                        <div id="EcontentData">
 
-                                    <th class="text-center" scope="col">Attachment</th>
-
-
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
+                          
+                        </div>
+                      </div>
                 
             </div>
         </div>
     </div>
 
+
+
+
+    <script type="text/javascript">
+        function GetContent(TopicId) {
+            
+                $.ajax({
+                    url: '/TeacherArea/CourseTopic/GetEcontentList',
+                    type: 'POST',
+                    data: { TId: TopicId },
+                    dataType: 'html',
+                    success: function (result) {
+
+                        //var d = result;
+                                              ///  alert(TopicId);
+                        //$("#EcontentData").html("");
+                        $("#EcontentData").html(result);
+                        
+                    },
+                    error: function () { alert("Whooaaa! Something went wrong..") },
+                });
+        }
+
+     
+        
+    </script>
     @*<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
             <script src="../../js/vertical-responsive-menu.min.js"></script>
             <script src="../../js/jquery-3.3.1.min.js"></script>

@@ -21,6 +21,8 @@ namespace E_learning.Areas.TeacherArea.Controllers
             return View();
         }
         //[HttpPost]
+
+        //ADD COURSES
         public ActionResult IndexcreatecoursesSave()
         {
             try
@@ -38,7 +40,7 @@ namespace E_learning.Areas.TeacherArea.Controllers
                 com.Parameters.AddWithValue("@Course_Category", Request.Form["Course_Category"].ToString());
                 com.Parameters.AddWithValue("@Course_Level", Request.Form["Course_Level"].ToString());
                 com.Parameters.AddWithValue("@Course_Image", Request.Form["convertImg"].ToString());
-
+                com.Parameters.AddWithValue("@User_id", HttpContext.Session.GetString("User_id").ToString());
                 string msg = com.ExecuteScalar().ToString();
                 sqlcon.Close();
 

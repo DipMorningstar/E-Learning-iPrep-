@@ -7,7 +7,32 @@
 
 }﻿
 
+<style>
+    .carousel-cell {
+        border-radius: 5px;
+        counter-increment: carousel-cell;
+    }
+
+
+
+        /* cell number */
+        .carousel-cell:before {
+            display: block;
+        }
+
+
+
+
+
+    .fcrse_1:hover {
+        -ms-transform: scale(1.1); /* IE 9 */
+        -webkit-transform: scale(1.0); /* Safari 3-8 */
+        transform: scale(1.1);
+    }
+</style>
 <!--our featured courses-->
+
+<!----!!!!!!!!!! CAROUSEL IS LEFT (CAROUSEL LIKE STUDENT AND TEACHER DASHBOARD) TRIED TO ADD BUT NOT WORKING IN LANDING PAGE !!!!!!!!!!  -->
 
 <div class="container-fluid ">
     <div class="row">
@@ -20,6 +45,22 @@
     </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--content featured courses-->
 <section id="content">
     <div class="container-fluid">
@@ -31,57 +72,43 @@
                     <div class="fcrse_1 mt-30">
                         <!--Image of Course-->
                         <a class="fcrse_img">
-                            @*@if (row["course_image"].ToString().Length == 0)
-                                {
-                                            <img src="../../images/courses/Softwareengcourses.jpg" alt="" style="height: 170.59px ">
-                                }
-                                            else
-                                            {*@
-                           
-                            <img src="@row["course_image"]"  alt="" style="height: 170.59px ">
-                                
-                            @*}*@
+
+                            <img src="@row["course_image"]" alt="" style="height: 170.59px ">
+
 
                         </a>
                         <div class="fcrse_content">
 
                             <!--Course Details-->
-                            
-                                <a href="../../CourseDetails/IndexCourseDetails" class="crse-cate"><h4>@row["Course_Title"] </a>
-                                <a href="#" class="crse-cate">@row["Course_Category"] </a>
-                                <a href="#" class="crse-cate">@row["Course_Level"]</a>
-                            
+                            @*<a href="../../CourseDetails/IndexCourseDetails" class="crse-cate"><h3>@row["Course_Title"]</h3> </a>*@
+
+                            <a href="/TeacherArea/CourseDetails/IndexCourseDetails?Course_id=@row["Course_id"]" class="crse-cate">@row["Course_Title"] </a>
+                            <a href="#" class="crse-cate">@row["Course_Category"] </a>
+                            <a href="#" class="crse-cate">@row["Course_Level"]</a>
+
+
+                        </div>
+                        <div class="_215b05">
+                            <ul class="_215b31">
+                                <li><button class="main-btn color" style="margin-left: 160px; background-color: red; color: white" data-toggle="modal" data-target="#CheckUserModal">Enroll Now</button></li>
+                            </ul>
                         </div>
                     </div>
-                </div>      }
+                </div>}
 
         </div>
     </div>
 </section>
 
+
+
+
+
 <!--content featured courses end-->
-<!---<div>
-    <table style="border: 2px">
-        <tr bgcolor="yellow">
-            <th>Course Name</th>
-            <th>Title</th>
-            <th>Course Description</th>
-            <th>Course Category</th>
-            <th>Course Level</th>
 
 
-        </tr>
-       @foreach (DataRow row in Model.Rows)
-        {
-<tr>
-    <td>@row["Course_name"]</td>
-    <td>@row["Course_Title"]</td>
-    <td>@row["Course_Description"]</td>
-    <td>@row["Course_Category"]</td>
-    <td>@row["Course_Level"]</td>
-
-
-</tr>
-}
-    </table>
-</div>-->
+<script type="text/javascript">
+    function CheckUser() {
+        alert("ok")
+    }
+</script>

@@ -1,5 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor Accessor
+
+<!DOCTYPE html>
 <html lang="en">
+
+
+
 
 
 <head>
@@ -8,10 +14,12 @@
     <meta name="viewport" content="width=device-width, shrink-to-fit=9">
     <meta name="description" content="Gambolthemes">
     <meta name="author" content="Gambolthemes">
-    <title>Prep</title>
+    <title>iPREP</title>
 
     <link rel="icon" type="../../image/png" href="../../images/minilogosize-removebg-preview (1).png">
 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="../../css/flickity.css" rel="stylesheet" />
     <link href="../../https://fonts.googleapis.com/css?family=Roboto:400,700,500" rel='stylesheet'>
     <link href='../../vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
     <link href="../../css/vertical-responsive-menu1.min.css" rel="stylesheet">
@@ -26,16 +34,31 @@
     <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../vendor/semantic/semantic.min.css">
     <link href="../../vendor/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
+
+    <link href="../../css/style.css" rel="stylesheet">
+    <link href="../../css/responsive.css" rel="stylesheet">
+
+
 </head>
 <body>
+    @*@if (TempData["Msg"] != null)
+            {
+        <script type="text/javascript">
+                alert('@TempData["Msg"]')
+                //$("#error").val(@TempData["Msg"]);
+        </script>}*@
+    <!--else { }-->
 
-    @if (TempData["Msg"] != null)
-    {
-<script type="text/javascript">
-        alert('@TempData["Msg"]')
-        //$("#error").val(@TempData["Msg"]);
-</script>}
-            else { }
+
+
+
+    <!-----!!!!!!!!!DASHBOARD BUTTON IS NOT WORKING PROPERLY !!!!!!!!!!!!!!!!!!-->
+    <!-----!!!!!!!!!ANALYICS BUTTON PAGE LEFT !!!!!!!!!!!!!!!!!!-->
+    <!-----!!!!!!!!! TOP CATEGORY IS NOT DYNAMIC!!!!!!!!!!!!!!!!!!-->
+
+
+
+
 
     <header class="header clearfix">
         <button type="button" id="toggleMenu" class="toggle_menu">
@@ -46,8 +69,8 @@
             <span class="collapse_menu--label"></span>
         </button>
         <div class="main_logo" id="logo">
-            <a href="../../Home/Index"><img src="../../images/logosize-removebg-preview.png" alt=""></a>
-            <a href="../../Home/Index"><img class="logo-inverse" src="../../images/logosize-removebg-preview.png" alt=""></a>
+            <a href="../../Home"><img src="../../images/logo_iprep.png" alt=""></a>
+            <a href="../../Home"><img class="logo-inverse" src="../../images/logo_iprep.png" alt=""></a>
         </div>
         <div class="top-category">
             <div class="ui compact menu cate-dpdwn">
@@ -88,25 +111,29 @@
 
 
 
-                <li class="ui dropdown">
-                    <a href="#" class="opts_account" title="Account">
-                        <img src="../../images/hd_dp.jpg" alt="">
-                    </a>
+
+            </ul>
+        </div>
+        <div class="btn-group">
+            <a href="" class="opts_account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img src="../../images/hd_dp.jpg" alt="">
+            </a>
+            <ul class="dropdown-menu">
+                <li>
                     <div class="menu dropdown_account">
                         <div class="channel_my">
                             <div class="profile_link">
-                                <img src="images/hd_dp.jpg" alt="">
+
                                 <div class="pd_content">
-                                    <div class="rhte85">
-                                        <h6>Joginder Singh</h6>
+                                    <div class="rhte85" style="text-align:center">
+                                        <h6>@Accessor.HttpContext.Session.GetString("User_Name")</h6>
                                         <div class="mef78" title="Verify">
                                             <i class='uil uil-check-circle'></i>
                                         </div>
                                     </div>
-                                    <span><a href="https://gambolthemes.net/cdn-cgi/l/email-protection" class="_cf_email_" data-cfemail="a8cfc9c5cac7c4919c9be8cfc5c9c1c486cbc7c5">[email&#160;protected]</a></span>
                                 </div>
                             </div>
-                            <a href="my_instructor_profile_view.html" class="dp_link_12">View Instructor Profile</a>
+
                         </div>
                         <div class="night_mode_switch__btn">
                             <a href="#" id="night-mode" class="btn-night-mode">
@@ -116,14 +143,16 @@
                                 </span>
                             </a>
                         </div>
-                        <a href="instructor_dashboard.html" class="item channel_item">Cursus dashboard</a>
-
-                        <a href="setting.html" class="item channel_item">Setting</a>
-                        <a href="help.html" class="item channel_item">Help</a>
-
-                        <a href="sign_in.html" class="item channel_item">Sign Out</a>
                     </div>
                 </li>
+
+
+
+
+                <li> <a href="../../SignInSignUp/IndexSignIn" class="dp_link_12" style="text-align:center">Sign Out</a></li>
+
+
+
             </ul>
         </div>
     </header>
@@ -134,7 +163,6 @@
             <div class="left_section">
                 <ul>
                     <li class="menu--item">
-
                         <a href="../TeacherHome/Indexteacherhome" class="menu--link" title="Dashboard">
                             <i class="uil uil-apps menu--icon"></i>
                             <span class="menu--label">Dashboard</span>
@@ -163,14 +191,24 @@
 
                 </ul>
             </div>
+            @*<div class="left_section pt-2">
+                    <ul>
+                        <li class="menu--item">
+                            <a href="setting.html" class="menu--link" title="Setting">
+                                <i class='uil uil-cog menu--icon'></i>
+                                <span class="menu--label">Setting</span>
+                            </a>
+                        </li>
 
+                    </ul>
+                </div>*@
         </div>
     </nav>
 
     <div class="wrapper">
         <div class="sa4d25">
             <div class="container-fluid">
-                @*@<input type="text" id="error" name="error" value="" />@*@
+
 
                 @RenderBody()
 
@@ -209,7 +247,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <div class="item_f3">
-                            <a href="#" class="btn1542">Teach on Prep</a>
+                            <a href="#" class="btn1542">Teach on iPREP</a>
                             <div class="lng_btn">
                                 <div class="ui language bottom right pointing dropdown floating" id="languages" data-content="Select Language">
                                     <a href="#"><i class='uil uil-globe lft'></i>Language<i class='uil uil-angle-down rgt'></i></a>
@@ -233,14 +271,14 @@
                                 <div class="col-md-6">
                                     <ul class="fotb_left">
                                         <li>
-                                            <a href="../Home/Index">
+                                            <a href="../../Home/Indexlandingpage">
                                                 <div class="footer_logo">
                                                     <img src="../../images/minilogosize-removebg.png" alt="image">
                                                 </div>
                                             </a>
                                         </li>
                                         <li>
-                                            <p>© 2022 <strong>Prep</strong>. All Rights Reserved.</p>
+                                            <p>© 2022 <strong>iPREP</strong>. All Rights Reserved.</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -274,6 +312,9 @@
     <script src="../../js/custom.js"></script>
     <script src="../../js/night-mode.js"></script>
     <script src="../../js/jquery-steps.min.js"></script>
+
+    <script src="../../js/flickity.pkgd.min.js"></script>
+
     <script>
         $('#add-course-tab').steps({
             onFinish: function () {

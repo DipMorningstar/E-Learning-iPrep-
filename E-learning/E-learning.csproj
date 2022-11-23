@@ -11,7 +11,10 @@
 
   <ItemGroup>
     <PackageReference Include="Grpc.Core" Version="2.45.0" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.8" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="Sitecore.FakeDb" Version="2.0.1" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
@@ -22,7 +25,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Areas\TeacherArea\Views\Test\Index.cshtml" />
     <None Include="wwwroot\js\site.js" />
   </ItemGroup>
 

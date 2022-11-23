@@ -16,5 +16,6 @@
         public string Questions { get; set; }
         public string Questions_options { get; set; }
         public string isAnswer { get; set; }
+        public int Course_id { get; set; }
     }
 }

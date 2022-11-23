@@ -55,6 +55,10 @@ footer, header, hgroup, menu, nav, section {
 }
 
 
+.card-registration .select-arrow {
+    top: 13px;
+}
+
 
 ol, ul {
 	list-style: none;
@@ -479,6 +483,15 @@ i.icon1 {
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
 }
+
+
+
+
+
+
+
+
+
 
 .opts_account {
     padding: 12px 0;
@@ -1902,11 +1915,21 @@ i.icon1 {
 	line-height: 26px;
 }
 
+#title{
+font-weight:bold;
+font-size:2rem;
+}
+#content{
+    font-family:'ROG Fonts';
+    font-size:2rem;
+}
+
 .footer {
-	background: #333;
-	width: 100%;
-	padding: 0;
-	float: left;
+    background: #333;
+    width: 100%;
+    padding: 0;
+    float: left;
+    position: unset !important;
 }
 
 .item_f1 {
@@ -1984,6 +2007,7 @@ i.icon1 {
 	margin-top: 50px;
 	padding: 20px 0;
 	border-top: 1px solid #454545;
+    position:unset;
 }
 
 .fotb_left li {
@@ -4051,6 +4075,20 @@ a.rmv-btn i {
 	border-radius: 3px;
 }
 
+.carousel-cell {
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+}
+
+/*.fcrse_1:hover {
+    -ms-transform: scale(1.1);*/ /* IE 9 */
+    /*-webkit-transform: scale(1.1);*/ /* Safari 3-8 */
+    /*transform: scale(1.1);
+}*/
+    /* cell number */
+    .carousel-cell:before {
+        display: block;
+    }
 .nav-link {
     display: block;
     padding: .5rem 1rem;
@@ -5859,6 +5897,60 @@ a.rmv-btn i {
     text-align: center;
 }
 
+
+.form-group{
+    margin-bottom:1em;
+    transition:all .3s;
+}
+.form-label{
+    /*font-size:1em;
+    color: black;
+    opacity:1;
+    display:block;
+    transform: translateY(-1.25em);
+    transform-origin:0 0;
+    transition:all .3s;*/
+
+    position:absolute;
+    left:1rem;
+    top: 0.8rem;
+    padding:0 0.5rem;
+    color:black;
+    cursor:text;
+    transition:top 200ms ease-in,left 200ms ease-in,font-size 200ms ease-in;
+}
+
+
+.form-control {
+    box-shadow: none;
+    background-color: rgba(0,0,0,.02);
+    border-radius: 0px;
+    border-color: #fff;
+    outline: none;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-style: none none solid none;
+    width: 100%;
+    transition: all .3s;
+    padding: 5px;
+}
+.form-control::placeholder{
+    color :transparent;
+}
+
+.form-control:focus{
+    box-shadow:none;
+    border-color:red;
+    outline:none;
+}
+
+    .form-control:focus + .form-label
+    {
+        top: -0.5rem;
+        font-size: 0.8rem;
+        left: 0.8rem;
+    }
 .ui.form.checkbox_sign {
     text-align: left;
 }

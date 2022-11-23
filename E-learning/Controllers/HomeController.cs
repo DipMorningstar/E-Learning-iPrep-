@@ -1,5 +1,6 @@
 ﻿using E_learning.Areas.TeacherArea.Models;
 using E_learning.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -17,6 +18,10 @@ namespace E_learning.Controllers
          
         public IActionResult Indexlandingpage()
         {
+            if (HttpContext.Session.Keys.Count()==0)
+            {
+                HttpContext.Session.SetString("User_id", "");
+            }
             String constring = "Data Source =(localdb)\\Local; Initial Catalog = PBC; Trusted_Connection = True";
             SqlConnection sqlcon = new SqlConnection(constring);
             String pname = "pCourseDetails";
@@ -26,11 +31,9 @@ namespace E_learning.Controllers
             SqlDataReader dr = com.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);
-
             return View(dt);
 
 
-           
         }
          
         

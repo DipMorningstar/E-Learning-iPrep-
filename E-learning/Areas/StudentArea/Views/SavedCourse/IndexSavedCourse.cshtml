@@ -1,0 +1,80 @@
+﻿
+@using System.Data;
+
+@{ Layout = "/Views/Shared/_LayoutStudent.cshtml"; }
+
+<body>
+
+
+    <!---SAVED COURSE PAGE -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 ">
+                
+
+                <!---NUMBER OF SAVED COURSE BY USER ALONG WITH REMOVE ALL BUTTON-->
+
+                <div class="section3125 hstry142">
+                    <div class="grp_titles pt-0">
+                        <div class="ht_title">Saved Courses</div>
+                        <a  href="/StudentArea/SavedCourse/DeleteAllSavedCourse?Userid=@ViewData["UserId"]"  title="Delete" value="DeleteAllSavedCourse" class="ht_clr">Remove All</a>
+                    </div>
+                    <div class="tb_145">
+                        <div class="wtch125">
+                            <span class="vdt14" style="font-size:45px">@ViewData["CountofCourses"]</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-9">
+                <div class="_14d25 mb-20">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <!---SAVED COURSE DETIALS SECTION ALONG WITH REMOVE BUTTON-->
+
+                            <h4 class="mhs_title">Saved Courses</h4>
+                            @foreach (DataRow row in Model.Rows)
+                            {
+                            <div class="fcrse_1 mt-3">
+                                <a href="course_detail_view.html" class="hf_img">
+                                    <img src="@row["Course_image"]" alt="">
+                                </a>
+                                <div class="hs_content">
+                                    <div class="eps_dots eps_dots10 more_dropdown">
+                                        <a href="#"><i class="uil uil-ellipsis-v"></i></a>
+                                        <div class="dropdown-content">
+                                            <span>
+                                                <i class='uil uil-times'></i> <a href="/StudentArea/SavedCourse/DeleteSavedCourse?SavedCourse_id=@row["SavedCourse_id"]" title="Delete" value="DeleteSavedCourse" class="gray-s Delete">Remove</a>
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                    <a href="course_detail_view.html" class="crse14s title900">@row["Course_Title"]</a>
+                                    <a href="#" class="crse-cate">@row["Course_Category"] | @row["Course_Level"]</a>
+
+                                    <a href="/StudentArea/SavedCourse/DeleteSavedCourse?SavedCourse_id=@row["SavedCourse_id"]" title="Delete" value="DeleteSavedCourse" class="rmv-btn" style="margin-left:250px;margin-right:250px; margin-top:150px"><i class='uil uil-trash-alt'></i>Remove Saved Courses</a>
+
+
+
+
+                                    @*<div class="auth1lnkprce">
+            <button class="shrt-cart-btn" title="cart"><i class="uil uil-shopping-cart-alt"></i></button>
+        </div>*@
+
+
+                                </div>
+                            </div>
+
+                            }
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
